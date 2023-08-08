@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-
 // import {Icons , Icon } from "../../UI_KIT/Atoms/Atom1.atom/icons";
 import Widget1Type from "./type";
 
