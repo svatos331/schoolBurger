@@ -1,46 +1,56 @@
-import styled from "styled-components"
+import styled ,{css} from "styled-components"
+import React, { FunctionComponent } from "react";
+import BreakPoints from "user.InterfaceLayer/Libraries/main.library/constants/breakPoints";
 
-// interface DividerProps {
-//     height?: number
-//     heightMob?: number
-//   }
-//   export const Divider = styled.div<DividerProps>`
-//     height: ${({ height = 8 }) => height}px;
+interface TextProps {
+    size?: number ,
+    weight?: number,
+    color?: string ,
+  };
   
-//     // Медиа запрос
-//     @media ${({ theme }) => theme.media.large} {
-//       height: ${({ heightMob = 4 }) => heightMob}px;
-//     }
-//   `
-  
-//   // Пример заголовков разного уровня
-//   interface TitleProps {
-//     weight?: 200 | 300 | 400 | 500 | 600 | 700
-//   }
-  
-//   export const Title1 = styled.h1<TitleProps>`
-//     font-size: 24px;
-//     font-weight: ${({ weight = 700 }) => weight};
-//   `
-  
-//   export const Title2 = styled.h2<TitleProps>`
-//     font-size: 18px;
-//     font-weight: ${({ weight = 700 }) => weight};
-//     `;
+export const Span = styled.span<TextProps>`
+color: ${({ color = "#FF5C00" }) => color};
+font-weight:  ${({ weight }) => weight};  //question
+font-size:  ${({ size }) => size};
+font-family: 'Nunito', sans-serif;
+`;
 
-interface h1Props {
-    size?: number | 50,
-    color?: string | "#FFFFFF"
-    colorSpan?: string | "FF5C00"
+  export const H1 = styled.h1<TextProps>`
+    font-size:  ${({ size = 50 }) => size+"px"};
+    font-weight:  ${({ weight = 800 }) => weight};
+    font-family: 'Nunito', sans-serif;
+    color: ${({ color = "#FFFFFF" }) => color};
+    
+    
+  @media (max-width: ${BreakPoints.MOBILE+"px"}) {
+      font-size:  ${({ size = 36 }) => size+"px"};
+      
+   }
+  @media (max-width: ${BreakPoints.SMALL_MOBILE+"px"}) {
+    font-size:  ${({ size = 30 }) => size+"px"};
   }
-  
-  export const H1 = styled.h1<h1Props>`
-    font-size:  ${({ size = 50 }) => size};
+  `;
 
-    & span{
-        color: ${({colorSpan="FF5C00"})=>colorSpan}
-    }
-  `
+  export const H2 = styled.h2<TextProps>`
+    font-size:  ${({ size = 40 }) => size+"px"};
+    font-weight:  ${({ weight = 600 }) => weight};
+    font-family: 'Nunito', sans-serif;
+    color: ${({ color = "#000000" }) => color};
+   
+  `;
 
-  
-  
+  export const H3 = styled.h3<TextProps>`
+  font-size:  ${({ size = 30 }) => size+"px"};
+  font-weight:  ${({ weight = 600 }) => weight}; //question
+  font-family: 'Nunito', sans-serif;
+  color: ${({ color = "#FFCCFF" }) => color};
+
+  `;
+
+  export const P = styled.p<TextProps>`
+  font-size:  ${({ size = 16 }) => size+"px"};
+  font-weight:  ${({ weight = 400 }) => weight};
+  font-family: 'Nunito', sans-serif;
+  color: ${({ color = "#FFFFFF" }) => color};
+`;
+// p 400;600;800
