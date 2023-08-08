@@ -6,8 +6,8 @@ import Error from "../../../Components/generalComponents/Error";
 import svyatoslavZhilinRoutesPaths from "./svyatoslavZhilin.routesPaths";
 import Loader from "../../../Components/generalComponents/Loader";
 import MainLayout from "../../../Layouts/Main.layout";
-import { MainPage } from "user.InterfaceLayer/Pages/SvyatoslavZhilin.pages/Main.page";
-import { LastPage } from "user.InterfaceLayer/Pages/SvyatoslavZhilin.pages/Last.page";
+import { LastPage } from "user.InterfaceLayer/Pages/Last.page";
+import { MainPage } from "user.InterfaceLayer/Pages/Main.page";
 
 const svyatoslavZhilinRoutes: RouteObject[] = [
 	{
