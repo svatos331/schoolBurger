@@ -1,11 +1,10 @@
-import { createApi } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import reducerPaths from "../../../../../../reducerPaths";
+import url from "../../services/url";
 import httpMethods from "../../../../../http/httpMethods";
 import { todoFromDtoServiceArray } from "../../services/dto/from.dto";
-import validateStatus from "../../../../../../services/utils.service/validateStatus";
-import baseQueryWithReAuth from "../../../../../../services/utils.service/baseQueryWithReAuth";
-import url from "business.InterfaceLayer/store/shared/entities/svyatoslavZhilin.entities/todo.entity/services/url";
+import validateStatus from "../../../../../../services/utils/validateStatus";
 
 export interface Props {
 	authToken: string;
@@ -14,7 +13,9 @@ export interface Props {
 
 export const todoApi = createApi({
 	reducerPath: `${reducerPaths.todo}/api`,
-	baseQuery: baseQueryWithReAuth,
+	baseQuery: fetchBaseQuery({
+		baseUrl: process.env.REACT_APP_API_URL,
+	}),
 	tagTypes: [`${reducerPaths.todo}TAG`],
 
 	endpoints: (build) => ({
@@ -34,4 +35,4 @@ export const todoApi = createApi({
 	}),
 });
 
-export const { useGetTodoQuery, useLazyGetTodoQuery } = todoApi;
+export const { useGetTodoQuery } = todoApi;

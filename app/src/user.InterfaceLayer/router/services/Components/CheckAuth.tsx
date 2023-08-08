@@ -24,7 +24,7 @@ const CheckAuth = () => {
 	// 	authTokenParams &&
 	// 		auth.id &&
 	// 		navigate(
-	// 			routeBuilder.service(getUrlByRoleService(getMainRoleService(auth.role)))
+	// 			routeBuilder(getUrlByRoleService(getMainRoleService(auth.role)))
 	// 		);
 	// }, [auth.id]);
 	//
