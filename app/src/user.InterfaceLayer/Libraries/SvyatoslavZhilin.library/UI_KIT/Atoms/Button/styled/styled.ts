@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { fonts } from "user.InterfaceLayer/Libraries/SvyatoslavZhilin.library/constants/fonts";
+
+import ButtonsConstants from "../constants";
+import ButtonEnum from "../enum";
 
 interface Button {
 	isLoading?: boolean;
@@ -9,11 +11,11 @@ export const Button = styled.button<Button>`
 	color: #000;
 	background: ${({ isLoading }) =>
 		isLoading ? "black" : "red"}; // TODO: пример
-	font-family: ${fonts.button.fontFamily};
-	font-size: ${fonts.button.fontSize};
-	font-style: ${fonts.button.fontStyle};
-	font-weight: ${fonts.button.fontWeight};
-	line-height: ${fonts.button.lineHeight};
+	// font-family: ${FontsEnum.Nunito};
+	// font-size: ${fonts.button.fontSize};
+	font-style: ${ButtonsConstants[ButtonEnum.enum_1].fontStyle};
+	// font-weight: ${fonts.button.fontWeight};
+	// line-height: ${fonts.button.lineHeight};
 	display: flex;
 	padding: 11px 0;
 	width: 276px;
