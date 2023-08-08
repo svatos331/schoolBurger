@@ -7,22 +7,22 @@ interface Icon {
 	url: string;
 }
 
-interface CategoryListProps {
-	icons: Icon[];
+interface CategoryProps {
+	category: Icon[];
 }
 
-const CategoryBtn: React.FC<CategoryListProps> = ({ icons }) => {
+const CategoryBtn: React.FC<CategoryProps> = ({ category }) => {
 	return (
 		<div>
-			{icons?.map((icon: any) => (
-				<ST.btn key={icon.id}>
+			{category?.map((categories: any) => (
+				<ST.btn key={categories.id}>
 					<ST.img>
 						<img
-							src={icon.url}
-							alt={icon.name}
+							src={categories.url}
+							alt={categories.name}
 						/>
 					</ST.img>
-					<ST.text>{icon.name}</ST.text>
+					<ST.text>{categories.name}</ST.text>
 				</ST.btn>
 			))}
 		</div>

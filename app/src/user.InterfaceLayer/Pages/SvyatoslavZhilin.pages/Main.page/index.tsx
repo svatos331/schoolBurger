@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import Component1 from "user.InterfaceLayer/Components/SvyatoslavZhilin.components.bll/Components1.component.bll";
-import { iconsData } from "user.InterfaceLayer/Components/SvyatoslavZhilin.components.bll/Components1.component.bll/const";
+import { categoryData } from "user.InterfaceLayer/Components/SvyatoslavZhilin.components.bll/Components1.component.bll/const/categoryData";
+import { socialData } from "user.InterfaceLayer/Components/SvyatoslavZhilin.components.bll/Components1.component.bll/const/socialData";
 // import { Component1 } from "test-lib";
 
 const MainPage: FC = () => {
@@ -10,7 +11,10 @@ const MainPage: FC = () => {
 	return (
 		<div>
 			<div>SvyatoslavZhilinMainPage</div>
-			<Component1 icons={iconsData} />
+			<Component1
+				category={categoryData}
+				social={socialData}
+			/>
 		</div>
 	);
 };
