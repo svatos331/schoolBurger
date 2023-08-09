@@ -10,7 +10,7 @@ const DataTimePicker :FC = () => {
         <DatePicker
             selected={startDate}
             onChange={(date:Date) => setStartDate(date)}
-        />
+         />
     );
 }
 export default DataTimePicker;
