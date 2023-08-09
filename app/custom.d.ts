@@ -11,7 +11,7 @@ declare module "*.module.css";
 
 
 declare module 'react-datepicker' {
-	import React, {Component, ReactNode} from 'react';
+	import React, {ReactNode, JSX} from 'react';
 	interface DatePickerProps {
 		selected: Date;
 		onChange: (date: Date) => void;
@@ -26,7 +26,7 @@ declare module 'react-datepicker' {
 		onCalendarClose?:() => void,
 		onCalendarOpen?:() => void,
 		popperModifiers?:Array<{name?:string, options?:{offset:Array<string>, rootBoundary?:string, tether?:boolean, altAxis?:boolean}}>,
-		customInput?: forwardRef<JSX.Element | ReactNode,  {value:ReactNode, onClick : () => void}>,
+		customInput?: React.FC<{value:ReactNode, onClick : () => void}>,//forwardRef
 		renderCustomHeader?:(object:{
 			date?:Date,
 			changeYear?:(year:number) => void,
@@ -111,7 +111,7 @@ declare module 'react-datepicker' {
 
 	}
 //
-	class DatePicker extends Component<DatePickerProps> {}
+	const DatePicker = React.FC<DatePickerProps>;
 
 	export default DatePicker;
 }

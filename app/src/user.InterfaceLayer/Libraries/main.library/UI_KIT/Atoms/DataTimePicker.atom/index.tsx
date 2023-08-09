@@ -1,16 +1,18 @@
-import {FC, useState} from "react";
+import {FC} from "react";
 
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
+import {IDatePickerProps} from "./type";
+import {IDataTimePickerPropsDefault} from "./const";
 
-const DataTimePicker :FC = () => {
-    const [startDate, setStartDate] = useState<Date>(new Date());
+const DataTimePicker: FC<IDatePickerProps> = ({children, dateFormat, selected, onChange, ...props}) => {
     return (
         <DatePicker
-            selected={startDate}
-            onChange={(date:Date) => setStartDate(date)}
-         />
+            {...props}
+        >{children ? children : null}
+        </DatePicker>
     );
 }
+DataTimePicker.defaultProps = IDataTimePickerPropsDefault;
 export default DataTimePicker;
