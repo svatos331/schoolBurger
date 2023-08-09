@@ -21,10 +21,19 @@ declare module 'react-datepicker' {
 		timeFormat?:string,
 		timeIntervals?:number,
 		children?:ReactNode | JSX.Element
-		showIcon?:boolean
+		showIcon?:boolean,
+		isClearable?:boolean,
+		popperClassName?:string,
+		placeholderText?:string,
+		popperPlacement?:string,
+		onCalendarClose?:() => void,
+		onCalendarOpen?:() => void,
+		popperModifiers:Array<{name?:string, options?:{offset:Array<string>, rootBoundery?:string, tether?:boolean, altAxis?:boolean}}>,
+		customInput?: forwardRef<JSX.Element | ReactNode,  {value:ReactNode, onClick : () => void}>,
+		renderCustomHeader
 		// другие пропсы
 	}
-
+//
 	class DatePicker extends Component<DatePickerProps> {}
 
 	export default DatePicker;
