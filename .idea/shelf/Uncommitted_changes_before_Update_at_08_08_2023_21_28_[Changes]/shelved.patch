@@ -1,0 +1,18 @@
+Index: app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Link.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React, {FC, memo, useMemo} from \"react\";\r\nimport {ILinkType} from \"./Link.atom/type\";\r\nimport * as ST from \"./Link.atom/styled\";\r\nimport {ILinkPropsDefault} from \"./Link.atom/const\";\r\nimport {NavLink} from \"react-router-dom\";\r\nimport {IUserStatusEnum} from \"./Link.atom/enum\";\r\nimport {loadingInfo} from \"./Link.atom/mock\";\r\n\r\n/**\r\n * Атом Link для для элементов навигации.\r\n * @param {ILinkType} props - Пропсы.\r\n * @param {IUserStatusEnum} [props.userStatus=IUserStatusEnum.DEFAULT] - состояние,\r\n * @param {string} [props.rootSrc] - путь для ссылки.\r\n * @param {string} [props.imgSrc] - url изображения.\r\n * @return {JSX.Element} - Возвращает элемент с изображение и ссылкой Link из react-router-dom текстом.\r\n */\r\n//@ts-ignore\r\nconst Link :FC<ILinkType> = ({userStatus = IUserStatusEnum.DEFAULT, rootSrc, imgSrc, text, isMaxWidth = false}) => {\r\n    const loadingContent =  userStatus === IUserStatusEnum.LOADING? <div>{loadingInfo}</div>:null;\r\n\r\n    return !loadingContent?  (<ST.LinkWrapper isMaxWidth = {isMaxWidth} userStatus = {userStatus}>\r\n        <ST.Icon src={imgSrc}/>\r\n        <ST.Text>\r\n            <NavLink to={rootSrc}>{text}</NavLink>\r\n        </ST.Text>\r\n    </ST.LinkWrapper>\r\n    ):loadingContent\r\n}\r\nLink.defaultProps = ILinkPropsDefault;\r\nexport default memo(Link);
+===================================================================
+diff --git a/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Link.tsx b/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Link.tsx
+--- a/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Link.tsx	
++++ b/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Link.tsx	
+@@ -24,7 +24,7 @@
+             <NavLink to={rootSrc}>{text}</NavLink>
+         </ST.Text>
+     </ST.LinkWrapper>
+-    ):loadingContent
++    ):loadingContent//TODO FIX RENDER CONDITION
+ }
+ Link.defaultProps = ILinkPropsDefault;
+ export default memo(Link);
+\ No newline at end of file
