@@ -1,12 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import React, { FC, memo } from "react";
+import React, { FC, memo, useMemo } from "react";
 import { styled } from "styled-components";
 import { calcFluidFontSize } from "./utils";
 import { CleanTagProps } from "./type";
-import {Tags} from "./enum";
+import { Tags } from "./enum";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CleanTag: FC<CleanTagProps> = ({ as: Tag = Tags.p }) => {
-	return <Tag /> 
+	return <Tag />;
 };
 /**
  * Компонент Typography для отображения текста с заданными стилями.
@@ -19,11 +19,14 @@ const CleanTag: FC<CleanTagProps> = ({ as: Tag = Tags.p }) => {
  * @return {JSX.Element} - Возвращает элемент с заданным текстом и стилями.
  */
 const Typography = styled(CleanTag)<CleanTagProps>((props) => {
-	let fontSize = props.size;
-	const arrayAdaptiveValues = props.adaptivevalues?.split(",").map((e) => +e);
-	if (arrayAdaptiveValues?.length === 4) {
-		fontSize = calcFluidFontSize(arrayAdaptiveValues);
-	}
+	const fontSize = useMemo(() => {
+		let fZ = props.size;
+		const arrayAdaptiveValues = props.adaptivevalues?.split(",").map((e) => +e);
+		if (arrayAdaptiveValues?.length === 4) {
+			fZ = calcFluidFontSize(arrayAdaptiveValues);
+		}
+	}, [props.adaptivevalues]);
+
 	return `
       font-size: ${fontSize};
       font-weight: ${props.weight};
