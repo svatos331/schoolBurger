@@ -10,12 +10,7 @@ const DataTimePicker :FC = () => {
         <DatePicker
             selected={startDate}
             onChange={(date:Date) => setStartDate(date)}
-            locale="ru"
-            showTimeSelect
-            timeFormat="p"
-            timeIntervals={15}
-            dateFormat="Pp"
-        ><div>1</div></DatePicker>
+        />
     );
 }
 export default DataTimePicker;

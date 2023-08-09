@@ -18,9 +18,10 @@ declare module 'react-datepicker' {
 		showTimeSelect?: boolean;
 		dateFormat?: string;
 		locale?:string|"en-ru",
-		timeFormat:string,
-		timeIntervals:number,
+		timeFormat?:string,
+		timeIntervals?:number,
 		children?:ReactNode | JSX.Element
+		showIcon?:boolean
 		// другие пропсы
 	}
 
