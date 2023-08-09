@@ -11,7 +11,7 @@ declare module "*.module.css";
 
 
 declare module 'react-datepicker' {
-	import React, {ReactNode, JSX} from 'react';
+	import React, {Component, ReactNode} from 'react';
 	interface DatePickerProps {
 		selected: Date;
 		onChange: (date: Date) => void;
@@ -111,7 +111,7 @@ declare module 'react-datepicker' {
 
 	}
 //
-	const DatePicker = React.FC<DatePickerProps>;
+	class DatePicker extends Component<DatePickerProps> {}
 
 	export default DatePicker;
 }
