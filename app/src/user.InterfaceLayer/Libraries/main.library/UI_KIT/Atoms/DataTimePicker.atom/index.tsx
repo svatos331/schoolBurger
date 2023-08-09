@@ -6,6 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import {IDatePickerProps} from "./type";
 import {IDataTimePickerPropsDefault} from "./const";
+//@ts-ignore
 import { registerLocale, setDefaultLocale } from  "react-datepicker";
 import(`date-fns/locale/${navigator.language}`).then((locale) => {
     registerLocale(navigator.language, locale.default || locale);

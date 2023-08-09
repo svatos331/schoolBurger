@@ -1,7 +1,3 @@
-import {IDatePickerProps} from "../type";
+const test = {};
 
-export const IDataTimePickerPropsDefault : IDatePickerProps= {
-    onChange:() => {},
-    selected: new Date(),
-    dateFormat:"dd/MM/yyyyг."
-}
+export default test;
