@@ -1,44 +1,44 @@
-import { FC, ReactNode, useMemo } from "react";
+import { FC, useMemo } from "react";
 import * as ST from "./styled";
+import { ISelectObjectProps } from "./type";
 
-interface ISelectObjectProps {
-	name: string;
-	valueArray: Array<string>;
-}
-
-const Select: FC<ISelectObjectProps> = ({ name, valueArray }) => {
+const Select: FC<ISelectObjectProps> = ({ name, valueArray, setValue }) => {
 	const ErrorTest = useMemo(
-		() => valueArray.length && process.env.NODE_ENV === "production",
+		() => valueArray.length !== 0 && process.env.NODE_ENV === "development",
 		[]
 	);
-
 	const options = useMemo(() => {
 		return valueArray?.map((e, index) => {
 			return (
-				<option
+				<ST.OptionStyled
 					key={index}
 					value={e}
 				>
 					{e}
-				</option>
+				</ST.OptionStyled>
 			);
 		});
 	}, [valueArray]);
 
-	if (ErrorTest) {
-		console.error("НЕТ МАССИВА");
-        return null
-	}
-
-
 	return (
 		<>
-			{ErrorTest ? (
-				<ST.SelectStyled name={name}>{options}</ST.SelectStyled>
+			{!ErrorTest ? (
+				<>
+					<ST.SelectStyledError>
+						Error: no value in Select props
+					</ST.SelectStyledError>
+					{console.error("Error: no value in Select props S")}
+				</>
 			) : (
-				<ST.SelectStyledError>
-					Error: no value in Select props
-				</ST.SelectStyledError>
+				<ST.SelectStyled
+					onChange={(e) => {
+						setValue(e.target.value);
+						e.target.blur();
+					}}
+					name={name}
+				>
+					{options}
+				</ST.SelectStyled>
 			)}
 		</>
 	);
