@@ -19,7 +19,7 @@
 /app/.env.development.local
 /app/.env.test.local
 /app/.env.production.local
-
+/app/yarn.lock
 /app/npm-debug.log*
 /app/yarn-debug.log*
 /app/yarn-error.log*
