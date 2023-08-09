@@ -4,11 +4,76 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe31de4-836a-413e-82cf-9ea2ac44afc7" name="Changes" comment="" />
+    <list default="true" id="dfe31de4-836a-413e-82cf-9ea2ac44afc7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/assets/icons/icon1.icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/stories/MyWidget.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_08_2023_21_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_08_2023_21_28__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_08_2023_21_28__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_08_2023_21_28__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Components/ComponentsBll/Component1.bll/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Components/ComponentsBll/Component1.bll/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom1.atom/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom1.atom/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom1.atom/const/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom1.atom/const/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom1.atom/enum/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom1.atom/enum/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom1.atom/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom1.atom/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom1.atom/mock/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom1.atom/mock/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom1.atom/styled/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom1.atom/styled/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom1.atom/type/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom1.atom/type/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom1.atom/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom1.atom/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/component/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/component/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/const/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/const/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/enum/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/enum/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/mock/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/mock/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/styled/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/styled/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/type/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/type/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/Atom2.atom/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Atoms/Atom2.atom/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Cells/Cells1.cell/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Cells/Cells1.cell/config/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Cells/Cells1.cell/const/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Cells/Cells1.cell/const/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Cells/Cells1.cell/enum/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Cells/Cells1.cell/enum/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Cells/Cells1.cell/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Cells/Cells1.cell/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Cells/Cells1.cell/mock/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Cells/Cells1.cell/mock/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Cells/Cells1.cell/styled/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Cells/Cells1.cell/styled/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Cells/Cells1.cell/type/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Cells/Cells1.cell/type/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Cells/Cells1.cell/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Cells/Cells1.cell/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Molecules/Name.molecule/const/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Molecules/Name.molecule/const/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Molecules/Name.molecule/enum/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Molecules/Name.molecule/enum/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Molecules/Name.molecule/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Molecules/Name.molecule/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Molecules/Name.molecule/styled/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Molecules/Name.molecule/styled/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Molecules/Name.molecule/type/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Molecules/Name.molecule/type/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Molecules/Name.molecule/utils/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/UI_KIT/Molecules/Name.molecule/utils/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/Widgets/widget1.widget/const/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/Widgets/widget1.widget/const/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/Widgets/widget1.widget/enum/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/Widgets/widget1.widget/enum/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/Widgets/widget1.widget/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/Widgets/widget1.widget/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/Widgets/widget1.widget/mock/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/Widgets/widget1.widget/mock/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/Widgets/widget1.widget/services/example.service/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/Widgets/widget1.widget/services/example.service/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/Widgets/widget1.widget/styled/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/Widgets/widget1.widget/styled/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/Widgets/widget1.widget/type/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/Widgets/widget1.widget/type/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/assets/icons/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/assets/icons/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/assets/icons/icon1.icon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/Widgets/my.widget/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/constants/breakPoints/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/constants/breakPoints/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/constants/colors/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/constants/colors/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/services/hooks.service/useDebounce.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/src/services/hooks.service/useDebounce.hook.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -31,25 +96,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ReactCreateComponentLastSelected&quot;: &quot;arrowFunctionComponent&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/my/StasambaFiles/HACKERING/schoolBurger/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\my\\StasambaFiles\\HACKERING\\schoolBurger\\app\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/FrontendSchoolLibrary/schoolBurger/app/src/user.InterfaceLayer/Libraries/main.library",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "D:\\FrontendSchoolLibrary\\schoolBurger\\app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -60,10 +125,45 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\FrontendSchoolLibrary\schoolBurger\app\src\user.InterfaceLayer\Libraries\main.library" />
       <recent name="C:\my\StasambaFiles\HACKERING\schoolBurger\app\src\user.InterfaceLayer\Libraries\main.library\UI_KIT\Atoms" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\FrontendSchoolLibrary\schoolBurger\app\src\user.InterfaceLayer\Libraries\main.library\src\stories" />
+      <recent name="D:\FrontendSchoolLibrary\schoolBurger\app\src\user.InterfaceLayer\Libraries\main.library\src" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
+    <configuration name="build-storybook" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build-storybook" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prepublishOnly" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prepublishOnly" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/app/package.json" />
       <command value="run" />
@@ -74,6 +174,24 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="storybook" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="storybook" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build-storybook" />
+        <item itemvalue="npm.storybook" />
+        <item itemvalue="npm.prepublishOnly" />
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,11 +210,18 @@
       <workItem from="1691516521762" duration="1322000" />
       <workItem from="1691517878207" duration="48000" />
       <workItem from="1691518276178" duration="250000" />
+      <workItem from="1691568147411" duration="19008000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/.storybook/main.js" />
+        <option value="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/.storybook/preview.js" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -120,5 +245,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
