@@ -17,6 +17,9 @@ interface IText {
 	children: ReactNode; //JSX.Element
 }
 
+//@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+
 export const Text: FC<IText> = ({ type, size, color, weight,children }) => {
 	switch (type) {
 		case Tags.h1:
