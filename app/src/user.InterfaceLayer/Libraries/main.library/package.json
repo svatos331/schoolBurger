@@ -1,23 +1,49 @@
 {
-  "name": "your-library-name",
-  "version": "1.0.0",
+  "name": "your-library-name-test-aserbekov",
+  "version": "1.0.4",
   "description": "Your UI library description",
-  "main": "dist/your-library-name.js",
+  "main": "./dist/main.js",
   "module": "dist/your-library-name.js",
   "typings": "dist/your-library-name.d.ts",
   "scripts": {
     "start": "react-scripts start",
     "build": "webpack --config webpack.config.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "pub": "npm run build && npm version patch && npm publish",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "*",
+    "react-dom": "*"
   },
   "devDependencies": {
-    "webpack": "^5.0.0",
-    "webpack-cli": "^4.0.0",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@storybook/addon-essentials": "7.2.1",
+    "@storybook/addon-interactions": "7.2.1",
+    "@storybook/addon-links": "7.2.1",
+    "@storybook/addon-onboarding": "1.0.8",
+    "@storybook/blocks": "7.2.1",
+    "@storybook/react": "7.2.1",
+    "@storybook/react-webpack5": "7.2.1",
+    "@storybook/testing-library": "0.2.0",
+    "@types/react": "^16.0.0",
     "babel-loader": "^8.0.0",
-    "babel-preset-react": "^7.0.0"
-  }
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.2.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "storybook": "7.2.1",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "files": [
+    "dist"
+  ]
 }

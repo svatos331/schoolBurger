@@ -1,11 +1,14 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 
 module.exports = {
 	entry: {
-		main: "./src/index.js", // Главная точка входа вашей библиотеки
+		main: "./src/index.ts", // Главная точка входа вашей библиотеки
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"), // Путь к выходной директории
+		clean: true,
 		filename: "[name].js", // Имя выходного файла будет соответствовать ключу entry
 		library: "YourLibraryName", // Имя, под которым ваша библиотека будет доступна
 		libraryTarget: "umd", // Цель экспорта - Universal Module Definition (UMD)
@@ -14,21 +17,36 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			// Добавьте правила для обработки JS/JSX файлов, если требуется
 			{
-				test: /\.(js|jsx)$/,
-				exclude: /node_modules/,
-				use: {
-					loader: "babel-loader",
-				},
+				test: /\.css/,
+				use: ['style-loader', 'css-loader'],
 			},
+			{
+				test: /\.(ts|tsx)?$/,
+				use: ['ts-loader'],
+				exclude: /node_modules/
+			}
 		],
 	},
+	plugins: [
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, "package.json"), // Путь к вашему package.json
+					to: path.resolve(__dirname, "../../../../node_modules/your-library-name-test-aserbekov/package.json"), // Путь, куда нужно скопировать
+				},
+				{
+					from: path.resolve(__dirname, "dist"), // Путь к вашему package.json
+					to: path.resolve(__dirname, "../../../../node_modules/your-library-name-test-aserbekov/dist"), // Путь, куда нужно скопировать
+				},
+			],
+		}),
+	],
 	resolve: {
-		extensions: [".js", ".jsx"], // Расширения файлов, которые Webpack будет искать
+		extensions: ['.ts', '.tsx']
 	},
 	externals: {
-		react: "React", // Внешние зависимости, которые пользователи должны предоставить сами
+		react: "react", // Внешние зависимости, которые пользователи должны предоставить сами
 		"react-dom": "ReactDOM",
 	},
 };
