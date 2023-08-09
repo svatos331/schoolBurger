@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfe31de4-836a-413e-82cf-9ea2ac44afc7" name="Changes" comment="init dataTimePicker">
-      <change afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/DataTimePicker.atom/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/DataTimePicker.atom/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/custom.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/custom.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/DataTimePicker.atom/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/DataTimePicker.atom/type/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms/DataTimePicker.atom/type/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Pages/Last.page/ui/LastPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/user.InterfaceLayer/Pages/Last.page/ui/LastPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/app/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="dfe31de4-836a-413e-82cf-9ea2ac44afc7" name="Changes" comment="init dataTimePicker" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,25 +31,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "StanislavAristov/PROFSOFT-9",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/my/StasambaFiles/HACKERING/schoolBurger/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\my\\StasambaFiles\\HACKERING\\schoolBurger\\app\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ReactCreateComponentLastSelected&quot;: &quot;arrowFunctionComponent&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;StanislavAristov/PROFSOFT-9&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/my/StasambaFiles/HACKERING/schoolBurger/app/src/user.InterfaceLayer/Libraries/main.library/UI_KIT/Atoms&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\my\\StasambaFiles\\HACKERING\\schoolBurger\\app\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
