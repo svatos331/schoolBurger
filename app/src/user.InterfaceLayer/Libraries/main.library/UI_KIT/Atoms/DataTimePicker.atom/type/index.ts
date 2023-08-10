@@ -1,12 +1,12 @@
 import {ReactNode} from "react";
-
+type Nullable<T> = T | null;
 
 export interface IDatePickerProps {
     selected: Date;
     onChange: (date: Date) => void;
     dateFormat?: string|"yyyy/MM/dd"|"dd/MM/yyyy"|"MMMM d, yyyy h:mm aa";
     locale?:string|"ru-GB"|"ru"|"en"|"en-GB"|"pt-BR"|"ru-Ru",
-    children?:ReactNode | JSX.Element
+    children? :Nullable<JSX.Element | ReactNode>
     showIcon?:boolean,
         isClearable?:boolean,
         popperClassName?:string,

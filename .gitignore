@@ -12,7 +12,7 @@ node_modules
 /build
 
 .vscode
-
+.idea
 # misc
 /app/.DS_Store
 /app/.env.local
