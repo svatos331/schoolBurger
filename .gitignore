@@ -13,6 +13,7 @@
 
 .vscode
 .idea
+.idea/workspace.xml
 .idea/*
 .idea/
 *.iml
