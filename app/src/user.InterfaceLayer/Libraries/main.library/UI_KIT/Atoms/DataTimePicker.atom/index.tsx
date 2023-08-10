@@ -14,9 +14,10 @@ import(`date-fns/locale/${navigator.language}`).then((locale) => {
     console.error('Ошибка при загрузке локали:', error);
 });
 
-const DataTimePicker :FC<IDatePickerProps> = ({children = null, dateFormat, selected, onChange,...props}) => {
+const DataTimePicker :FC<IDatePickerProps> = ({children = null, locale="ru",dateFormat = "dd.MM.yyyy", selected, onChange,...props}) => {
+
     return (
-        <DatePicker onChange={onChange}/>
+        <DatePicker dateFormat={dateFormat} locale={locale} onChange={onChange} selected={selected}  {...props}/>
     );
 }
 DataTimePicker.defaultProps = IDataTimePickerPropsDefault;
