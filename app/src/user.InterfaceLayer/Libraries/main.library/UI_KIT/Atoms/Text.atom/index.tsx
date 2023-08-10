@@ -23,8 +23,9 @@ const Typography = styled(CleanTag)<CleanTagProps>((props) => {
 		let fZ = props.size;
 		const arrayAdaptiveValues = props.adaptivevalues?.split(",").map((e) => +e);
 		if (arrayAdaptiveValues?.length === 4) {
-			fZ = calcFluidFontSize(arrayAdaptiveValues);
-		}
+		fZ = calcFluidFontSize(arrayAdaptiveValues);
+		} 
+		return	fZ;
 	}, [props.adaptivevalues]);
 
 	return `

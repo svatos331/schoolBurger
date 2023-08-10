@@ -15,10 +15,21 @@ const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 			data from jsonplaceholder : {JSON.stringify(data)}
 			<Typography
 				family={EFontFamily.NUN}
-				weight={"bold"}
-				as={"button"}
+				weight={"700"}
+				as={"p"}
 				color={Colors.BLACK}
 				adaptivevalues={EAdaptiveFluidFontValues.TEXT_20_22_900_1200}
+			>
+				
+				ffffd
+			</Typography>
+			<Typography
+				family={EFontFamily.NUN}
+				weight={"700"}
+				as={"p"}
+				color={Colors.BLACK}
+				size={"30px"}
+				//adaptivevalues={EAdaptiveFluidFontValues.TEXT_20_22_900_1200}
 			>
 				
 				ffffd
