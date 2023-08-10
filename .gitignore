@@ -16,6 +16,7 @@
 .idea/*
 .idea/
 *.iml
+app/yarn.lock
 *.iws
 *.ipr
 .idea/shelf/*
