@@ -8,9 +8,3 @@ declare module "*.svg" {
 }
 
 declare module "*.module.css";
-
-declare module 'react-datepicker' {
-	import {Component} from "react";
-	class DatePicker extends Component<DatePickerProps> {}
-	export default DatePicker;
-}

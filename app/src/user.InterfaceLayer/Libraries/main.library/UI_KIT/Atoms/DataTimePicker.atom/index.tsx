@@ -6,7 +6,6 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import {IDatePickerProps} from "./type";
 import {IDataTimePickerPropsDefault} from "./const";
-//@ts-ignore
 import { registerLocale, setDefaultLocale } from  "react-datepicker";
 import(`date-fns/locale/${navigator.language}`).then((locale) => {
     registerLocale(navigator.language, locale.default || locale);
@@ -17,13 +16,7 @@ import(`date-fns/locale/${navigator.language}`).then((locale) => {
 
 const DataTimePicker :FC<IDatePickerProps> = ({children = null, dateFormat, selected, onChange,...props}) => {
     return (
-        <DatePicker
-            locale="ru"
-            dateFormat={dateFormat}
-            selected={selected}
-            onChange={onChange}
-            {...props}
-         >{children as JSX.Element}</DatePicker>
+        <DatePicker onChange={onChange} {...props}/>
     );
 }
 DataTimePicker.defaultProps = IDataTimePickerPropsDefault;
