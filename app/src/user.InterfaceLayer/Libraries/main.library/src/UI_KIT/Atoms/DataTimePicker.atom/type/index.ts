@@ -1,10 +1,15 @@
-import {ReactDatePickerProps} from "react-datepicker";
+import { ReactDatePickerProps } from "react-datepicker";
 import * as React from "react";
 
-type onChangeA =  (d:Date, event?:React.SyntheticEvent<any> | undefined) => void;
-type onChangeB =  (date:[Date,Date]) => void;
+type onChangeA = (
+	data: Date,
+	event?: React.SyntheticEvent<any> | undefined
+) => void;
+
+type onChangeB = (date: [Date, Date]) => void;
+
 // @ts-ignore
-export interface IDatePickerProps  extends ReactDatePickerProps{
-    onChange:onChangeA|onChangeB
-    selectsRange?:boolean
+export interface IDatePickerProps extends ReactDatePickerProps {
+	onChange: onChangeA | onChangeB;
+	selectsRange?: boolean;
 }
