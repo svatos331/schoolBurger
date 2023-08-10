@@ -4,6 +4,11 @@
 /app/node_modules
 /.pnp
 .pnp.js
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
 
 # testing
 /coverage
