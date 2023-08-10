@@ -4,7 +4,7 @@ import BreakPoints from "../../../../../../constants/breakPoints";
 
 export const DatePickerWrapper = styled.div`
 
-
+  margin-bottom: 2px;
   //display: flex !important;
 
   .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--disabled {
