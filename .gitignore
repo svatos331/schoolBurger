@@ -4,6 +4,7 @@
 /app/node_modules
 /.pnp
 .pnp.js
+app/src/user.InterfaceLayer/Libraries/main.library/node_modules
 # Default ignored files
 /shelf/
 /workspace.xml
