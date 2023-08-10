@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Colors from "user.InterfaceLayer/Libraries/main.library/src/constants/colors";
-import BreakPoints from "../../../../../../constants/breakPoints";
+import BreakPoints from "../../../../../../../constants/breakPoints";
+import Colors from "../../../../constants/colors";
 
 export const DatePickerWrapper = styled.div`
 
