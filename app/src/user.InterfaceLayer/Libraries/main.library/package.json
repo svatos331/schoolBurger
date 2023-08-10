@@ -1,6 +1,7 @@
 {
   "name": "your-library-name-test-aserbekov",
   "version": "1.0.4",
+  "type": "module",
   "description": "Your UI library description",
   "main": "./dist/main.js",
   "module": "dist/your-library-name.js",

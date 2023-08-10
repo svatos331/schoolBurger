@@ -1,27 +1,33 @@
-import { ComponentStory, ComponentMeta } from "@storybook/react";
 import React from "react";
+import type { Meta, StoryObj } from '@storybook/react';
 import MyWidget from "../index";
 
-export default {
-	title: "Example/MyWidget",
-	component: MyWidget,
-} as ComponentMeta<typeof MyWidget>;
+const meta = {
+  title: 'Example/MyWidget',
+  component: MyWidget,
+  tags: ['widget'],
+  parameters: {
+    layout: 'centered',
+  },
+} satisfies Meta<typeof MyWidget>;
 
-const Template: ComponentStory<typeof MyWidget> = (args) => (
-	<MyWidget {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const FirstText = Template.bind({});
-FirstText.args = {
-	text: "First test text",
+export const First: Story = {
+  args: {
+    text: 'First test text',
+  },
 };
 
-export const SecondText = Template.bind({});
-SecondText.args = {
-	text: "Second test text",
-};
+export const Second: Story = {
+	args: {
+	  text: 'Second test text',
+	},
+  };
 
-export const ThirdText = Template.bind({});
-ThirdText.args = {
-	text: "Third test text",
-};
+  export const Third: Story = {
+	args: {
+	  text: 'Third test text',
+	},
+  };

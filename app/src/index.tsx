@@ -8,7 +8,7 @@ import { store } from "./business.InterfaceLayer/store";
 import mainRouter from "./user.InterfaceLayer/router";
 import ToasterModalWindow from "./user.InterfaceLayer/Components/generalComponents/ModalWindows/Toaster.modalWindow";
 //@ts-ignore
-import {MyWidget} from 'your-library-name-test-aserbekov'
+// import {MyWidget} from 'your-library-name-test-aserbekov's
 
 import "user.InterfaceLayer/styles/default.style.css";
 import "user.InterfaceLayer/styles/global.style.css";
@@ -20,7 +20,7 @@ const routers = createBrowserRouter(mainRouter);
 
 root.render(
 	<React.StrictMode>
-		<MyWidget text={'fdfdfd'}/>
+		{/* <MyWidget text={'fdfdfd'}/> */}
 		<Provider store={store}>
 			<RouterProvider router={routers} />
 		</Provider>
