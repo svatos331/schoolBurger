@@ -10,7 +10,7 @@
 
 # production
 /build
-
+.idea/workspace.xml
 .vscode
 .idea
 .idea/*
