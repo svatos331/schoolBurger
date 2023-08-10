@@ -16,7 +16,7 @@ import(`date-fns/locale/${navigator.language}`).then((locale) => {
 
 const DataTimePicker :FC<IDatePickerProps> = ({children = null, dateFormat, selected, onChange,...props}) => {
     return (
-        <DatePicker onChange={onChange} {...props}/>
+        <DatePicker onChange={onChange}/>
     );
 }
 DataTimePicker.defaultProps = IDataTimePickerPropsDefault;
