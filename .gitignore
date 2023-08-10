@@ -12,7 +12,13 @@
 /build
 
 .vscode
-
+.idea
+.idea/shelf/*
+.idea/*
+.idea/
+*.iml
+*.iws
+*.ipr
 # misc
 /app/.DS_Store
 /app/.env.local
