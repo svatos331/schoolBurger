@@ -15,11 +15,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "noImplicitAny": true,
+    "typeRoots": ["./node_modules/@types"],
     "sourceMap": true,
     "strictNullChecks": true,
     "jsx": "react-jsx",
     "baseUrl": "./src"
   },
   "include": [
-    "./src", "custom.d.ts"]
+    "src/**/*", "custom.d.ts"]
 }

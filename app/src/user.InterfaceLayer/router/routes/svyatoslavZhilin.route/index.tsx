@@ -1,23 +1,17 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import { RouteObject } from "react-router-dom";
 
-import RoutesPaths from "../../routesPaths";
-import Error from "../../../Components/general.components/Error";
-import MainLayout from "../../../Layouts/SvyatoslavZhilin.layouts/Main.layout";
+import Index from "../../routePath";
+import Error from "../../../Components/generalComponents/Error";
 import svyatoslavZhilinRoutesPaths from "./svyatoslavZhilin.routesPaths";
-import Loader from "../../../Components/general.components/Loader";
-
-const LastPage = lazy(
-	() => import("../../../Pages/SvyatoslavZhilin.pages/Last.page")
-);
-
-const MainPage = lazy(
-	() => import("../../../Pages/SvyatoslavZhilin.pages/Main.page")
-);
+import Loader from "../../../Components/generalComponents/Loader";
+import MainLayout from "../../../Layouts/Main.layout";
+import { LastPage } from "user.InterfaceLayer/Pages/Last.page";
+import { MainPage } from "user.InterfaceLayer/Pages/Main.page";
 
 const svyatoslavZhilinRoutes: RouteObject[] = [
 	{
-		path: RoutesPaths.SVYATOSLAV_ZHILIN,
+		path: Index.SVYATOSLAV_ZHILIN,
 		element: <MainLayout />,
 		errorElement: <Error />,
 		children: [
@@ -40,7 +34,7 @@ const svyatoslavZhilinRoutes: RouteObject[] = [
 				errorElement: <Error />,
 			},
 			{
-				path: RoutesPaths.NOT_FOUND,
+				path: Index.NOT_FOUND,
 				element: <div>страницы нет</div>,
 			},
 		],

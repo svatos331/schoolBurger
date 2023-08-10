@@ -1,0 +1,1 @@
+export {LastPageAsync as LastPage} from './ui/LastPage.async'
