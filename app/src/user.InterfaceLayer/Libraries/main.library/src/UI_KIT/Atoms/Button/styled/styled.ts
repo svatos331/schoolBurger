@@ -109,9 +109,9 @@ export const ButtonSocial = styled.button<Button>`
 	svg {
 		transition: all 0.8s ease;
 		cursor: pointer;
-		fill: ${Colors.ORANGE_ACTIVE}
+		fill: ${Colors.ORANGE_ACTIVE};
 		&:hover {
-			fill:${Colors.ORANGE_HOVER}
+			fill: ${Colors.ORANGE_HOVER};
 		}
 	}
 `;
