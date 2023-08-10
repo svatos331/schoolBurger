@@ -6,9 +6,10 @@ import "react-datepicker/dist/react-datepicker.css";
 import {IDatePickerProps} from "./type";
 import {IDataTimePickerPropsDefault} from "./const";
 
-const DataTimePicker :FC<IDatePickerProps> = ({children = null, dateFormat, selected, onChange,...props}) => {
+import * as ST from "./styled";
+const DataTimePicker :FC<IDatePickerProps> = ({locale,children = null, dateFormat, selected, onChange,...props}) => {
     return (
-        <DatePicker onChange={onChange}/>
+        <DatePicker onChange={onChange} {...props} dateFormat = {dateFormat} selected={selected}>{children}</DatePicker>
     );
 }
 DataTimePicker.defaultProps = IDataTimePickerPropsDefault;
