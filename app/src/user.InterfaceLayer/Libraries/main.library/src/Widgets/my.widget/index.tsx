@@ -6,7 +6,7 @@ type MyWidgetTypeProps = {
 
 const MyWidget: React.FC<MyWidgetTypeProps> = ({text}) => {
     return (
-        <div>
+        <div data-testid="my-widget">
             {text}
         </div>
     );
