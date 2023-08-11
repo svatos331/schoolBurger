@@ -27,12 +27,9 @@ app/yarn.lock
 *.iws
 *.ipr
 .idea/shelf/*
-.idea/*
-.idea/
-*.iml
-*.iws
-*.ipr
 # misc
+/app/src/user.InterfaceLayer/Libraries/main.library/node_modules
+/app/src/user.InterfaceLayer/Libraries/main.library/yarn.lock
 /app/.DS_Store
 /app/.env.local
 /app/.env.development.local
