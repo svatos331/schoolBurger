@@ -1,5 +1,5 @@
+import React from "react";
 import { ReactDatePickerProps } from "react-datepicker";
-import * as React from "react";
 
 type onChangeA = (
 	d: Date,
