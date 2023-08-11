@@ -1,8 +1,8 @@
 ```documentation ``` - https://reactdatepicker.com/#example-children
 ```документация есть в Docs.html```
 
-
 ```example locale:```
+
 ```
 import(`date-fns/locale/${navigator.language}`).then((locale) => {
     registerLocale(navigator.language, locale.default || locale);

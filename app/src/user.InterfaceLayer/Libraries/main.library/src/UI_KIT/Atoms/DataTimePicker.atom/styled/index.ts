@@ -1,10 +1,11 @@
 import styled from "styled-components";
+
 import BreakPoints from "../../../../../../../constants/breakPoints";
+
 import Colors from "../../../../constants/colors";
 
 export const DatePickerWrapper = styled.div`
 	margin-bottom: 2px;
-	//display: flex !important;
 
 	.react-datepicker__time-container,
 	.react-datepicker__time,
@@ -35,7 +36,6 @@ export const DatePickerWrapper = styled.div`
 		margin-left: -4px;
 		position: absolute;
 		width: 0;
-		//display: flex !important;
 	}
 
 	.react-datepicker__month-container {
@@ -47,9 +47,6 @@ export const DatePickerWrapper = styled.div`
 		}
 
 		.react-datepicker__month {
-			//display: flex;
-			//flex-direction: column;
-
 			.react-datepicker__week {
 				.react-datepicker__day {
 				}
@@ -111,8 +108,6 @@ export const DatePickerWrapper = styled.div`
 			}
 		}
 
-		//display: flex !important;
-
 		&__header {
 			//display: flex !important;
 			flex-direction: column !important;
@@ -124,13 +119,8 @@ export const DatePickerWrapper = styled.div`
 		}
 
 		&__popper {
-			//display: flex !important;
-
 			& > div {
-				//display: flex !important;
-
 				.react-datepicker {
-					//fonts
 					color: ${Colors.WHITE} !important;
 				}
 			}
@@ -143,11 +133,6 @@ export const DatePickerWrapper = styled.div`
 	.react-datepicker-popper {
 		& > div {
 			.react-datepicker {
-				//fonts
-				&,
-				& div {
-				}
-
 				@media (max-width: ${BreakPoints.MOBILE}px) {
 					font-size: 10px !important;
 				}
