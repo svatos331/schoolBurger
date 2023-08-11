@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Colors from "user.InterfaceLayer/Libraries/main.library/constants/colors";
+import Colors from "../../../../../main.library/src/constants/colors"
 
 export const SelectStyled = styled.select`
 	display: flex;
