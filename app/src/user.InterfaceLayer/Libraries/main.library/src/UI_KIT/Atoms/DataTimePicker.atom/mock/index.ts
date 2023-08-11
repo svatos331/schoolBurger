@@ -1,7 +1,8 @@
 import { IDatePickerProps } from "../type";
+import { CommonComponentsProps } from "../../../../constants/commonComponentProps";
 
 export const IDataTimePickerPropsDefault: IDatePickerProps = {
-	onChange: () => {},
+	[CommonComponentsProps.onChange]: () => {},
 	selected: new Date(),
-	dateFormat: "dd:MM:yyyyг.",
+	[CommonComponentsProps.dateFormat]: "dd:MM:yyyyг.",
 };

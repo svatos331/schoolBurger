@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useMemo } from "react";
 
 import DatePicker from "react-datepicker";
 
@@ -13,18 +13,23 @@ import "react-datepicker/dist/react-datepicker.module.css";
 const DataTimePicker: FC<IDatePickerProps> = ({
 	onChange,
 	children,
+	isLoading,
+	isError,
 	...props
 }) => {
-	return (
-		<ST.DatePickerWrapper>
-			<DatePicker
-				onChange={onChange}
-				{...props}
-			>
-				{children}
-			</DatePicker>
-		</ST.DatePickerWrapper>
+	const view = useMemo(
+		() =>
+			!(isLoading || isError) ? (
+				<DatePicker
+					onChange={onChange}
+					{...props}
+				>
+					{children}
+				</DatePicker>
+			) : null,
+		[isLoading, isError]
 	);
+	return <ST.DatePickerWrapper>{view}</ST.DatePickerWrapper>;
 };
 DataTimePicker.defaultProps = IDataTimePickerPropsDefault;
 export default DataTimePicker;
