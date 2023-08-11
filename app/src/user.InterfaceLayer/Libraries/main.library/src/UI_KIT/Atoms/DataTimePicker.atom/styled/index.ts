@@ -71,7 +71,6 @@ export const DatePickerWrapper = styled.div`
 	.react-datepicker__time-box,
 	ul.react-datepicker__time-list,
 	li.react-datepicker__time-list-item--selected {
-		background-color: ${Colors.ORANGE_DEFAULT} !important;
 		color: white;
 		font-weight: bold;
 	}
@@ -110,14 +109,11 @@ export const DatePickerWrapper = styled.div`
 			ul {
 				color: ${Colors.WHITE} !important;
 			}
-
-			background-color: ${Colors.ORANGE_DEFAULT};
 		}
 
 		//display: flex !important;
 
 		&__header {
-			background-color: ${Colors.ORANGE_DEFAULT};
 			//display: flex !important;
 			flex-direction: column !important;
 		}
@@ -136,7 +132,6 @@ export const DatePickerWrapper = styled.div`
 				.react-datepicker {
 					//fonts
 					color: ${Colors.WHITE} !important;
-					background-color: ${Colors.ORANGE_ACTIVE};
 				}
 			}
 		}
@@ -156,7 +151,6 @@ export const DatePickerWrapper = styled.div`
 				@media (max-width: ${BreakPoints.MOBILE}px) {
 					font-size: 10px !important;
 				}
-				background-color: ${Colors.ORANGE_ACTIVE};
 			}
 		}
 	}

@@ -1,26 +1,21 @@
-import { FC } from "react";
+import React, { FC } from "react";
 
 import DatePicker from "react-datepicker";
 
-import "react-datepicker/dist/react-datepicker.css";
-import {IDatePickerProps} from "./type";
-import {IDataTimePickerPropsDefault} from "./const";
-
 import { IDatePickerProps } from "./type";
-import { IDataTimePickerPropsDefault } from "./const";
 
 import * as ST from "./styled";
-import React from "react";
+import { IDataTimePickerPropsDefault } from "./mock";
+import "react-datepicker/dist/react-datepicker.module.css";
 
 const DataTimePicker: FC<IDatePickerProps> = ({
 	onChange,
-	children = null,
+	children,
 	...props
 }) => {
 	return (
 		<ST.DatePickerWrapper>
 			<DatePicker
-				//@ts-ignore
 				onChange={onChange}
 				{...props}
 			>
