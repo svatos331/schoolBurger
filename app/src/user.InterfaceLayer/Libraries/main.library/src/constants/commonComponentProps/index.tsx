@@ -33,8 +33,6 @@ export enum CommonComponentsProps {
 	pattern = "pattern",
 	autoFocus = "autoFocus",
 	isSuccess = "isSuccess",
-	dateFormat = "dateFormat",
-	timeFormat = "timeFormat",
 }
 
 export interface ICommonComponentProps {
