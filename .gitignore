@@ -24,9 +24,33 @@ node_modules
 /app/yarn-debug.log*
 /app/yarn-error.log*
 
+<<<<<<< HEAD
 
 #locks
 */package-lock.json
 */yarn.lock
 
 */.idea
+=======
+#locks
+
+yarn.lock
+package-lock.json
+*/yarn.lock
+*/package-lock.json
+
+app/yarn.lock
+.idea/vcs.xml
+.idea/prettier.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/jsLinters/eslint.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/schoolBurger.iml
+app/src/user.InterfaceLayer/Libraries/main.library/yarn-error.log
+app/src/user.InterfaceLayer/Libraries/main.library/yarn.lock
+./yarn.lock
+.idea/workspace.xml
+.idea/shelf/Uncommitted_changes_before_Update_at_12_08_2023_0_00__Changes_.xml
+.idea/shelf/Uncommitted_changes_before_Update_at_12_08_2023_0_00_\[Changes\]/shelved.patch
+>>>>>>> StanislavAristov/fix#main
