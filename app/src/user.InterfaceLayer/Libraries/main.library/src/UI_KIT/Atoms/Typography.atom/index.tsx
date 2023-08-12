@@ -9,17 +9,19 @@ export const Typography: FC<IText> = ({
 	size,
 	color,
 	weight,
-
+	family,
+	lineHeight,
 	children,
 }) => {
 	switch (type) {
 		case Tags.h1:
 			return (
 				<ST.H1
-					color={color}
-					size={size}
-					weight={weight}
-					family={"'Nunito', sans-serif"} 
+					color={color?color:"FFFFFF"}
+					size={size?size:"50px"}
+					weight={weight?weight:800}
+					family={family?family:"'Nunito', sans-serif"} 
+					lineHeight={lineHeight}
 				>
 					{children}
 				</ST.H1>

@@ -7,9 +7,9 @@ export interface IText extends TextProps {
 }
 
 export interface TextProps {
-    size?: number;
+    size?: string;
     color?: string;
     weight?:number;
-    lineHeight?:number;
+    lineHeight?:string;
     family?:string;
   };
