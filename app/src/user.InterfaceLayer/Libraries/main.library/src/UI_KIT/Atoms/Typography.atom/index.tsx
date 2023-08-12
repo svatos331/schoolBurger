@@ -1,0 +1,79 @@
+import React, { FC } from "react";
+import * as ST from "./styled";
+
+import { Tags, IText } from "./enum";
+
+export const Typography: FC<IText> = ({
+	type,
+	size,
+	color,
+	weight,
+	children,
+}) => {
+	switch (type) {
+		case Tags.h1:
+			return (
+				<ST.H1
+					color={color}
+					size={size}
+					weight={weight}
+				>
+					{children}
+				</ST.H1>
+			);
+		case Tags.span:
+			return (
+				<ST.Span
+					color={color}
+					size={size}
+					weight={weight}
+				>
+					{children}
+				</ST.Span>
+			);
+		case Tags.h2:
+			return (
+				<>
+					<ST.H2
+						color={color}
+						size={size}
+						weight={weight}
+					>
+						{children}
+					</ST.H2>
+				</>
+			);
+		case Tags.h3:
+			return (
+				<>
+					<ST.H3
+						color={color}
+						size={size}
+						weight={weight}
+					>
+						{children}
+					</ST.H3>
+				</>
+			);
+		case Tags.p:
+			return (
+				<>
+					<ST.P
+						color={color}
+						size={size}
+						weight={weight}
+					>
+						{children}
+					</ST.P>
+				</>
+			);
+		default:
+			return (
+				<>
+					<p>ErrorAtomTypography</p>;
+				</>
+			);
+	}
+};
+
+export default Typography;
