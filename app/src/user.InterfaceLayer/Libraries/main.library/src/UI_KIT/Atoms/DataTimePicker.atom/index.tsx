@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from "react";
+import React, {FC, memo, useMemo} from "react";
 
 import DatePicker from "react-datepicker";
 
@@ -32,4 +32,5 @@ const DataTimePicker: FC<IDatePickerProps> = ({
 	return <ST.DatePickerWrapper>{view}</ST.DatePickerWrapper>;
 };
 DataTimePicker.defaultProps = IDataTimePickerPropsDefault;
-export default DataTimePicker;
+
+export default memo(DataTimePicker);
