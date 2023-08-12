@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 export enum CommonComponentsProps {
 	isLoading = "isLoading",
@@ -10,6 +10,8 @@ export enum CommonComponentsProps {
 	onToggle = "onToggle",
 	value = "value",
 	type = "type",
+	children = "children",
+	Icon = "Icon",
 	placeholder = "placeholder",
 	disabled = "disabled",
 	label = "label",
@@ -28,37 +30,42 @@ export enum CommonComponentsProps {
 	minLength = "minLength",
 	pattern = "pattern",
 	autoFocus = "autoFocus",
+	isSuccess = "isSuccess",
+	dateFormat = "dateFormat",
+	timeFormat = "timeFormat",
 }
 
 export interface ICommonComponentProps {
-	onChange?: (value: any) => void;
-	isError?: boolean;
-	isLoading?: boolean;
-	isSuccess?: boolean;
-	onError?: () => void;
-	onSubmit?: () => void;
-	onClick?: () => void;
-	onToggle?: () => void;
-	value?: any;
-	dateFormat?: string;
-	timeFormat?: string;
-	type?: string;
-	placeholder?: string;
-	disabled?: boolean;
-	label?: string;
-	id?: string;
-	className?: string;
-	style?: React.CSSProperties;
-	required?: boolean;
-	min?: number;
-	max?: number;
-	step?: number;
-	options?: Array<{ label: string; value: any }>; // Используем value для определения значения выбора
-	multiple?: boolean;
-	rows?: number;
-	cols?: number;
-	maxLength?: number;
-	minLength?: number;
-	pattern?: string;
-	autoFocus?: boolean;
+	[CommonComponentsProps.onChange]?: () => void;
+	[CommonComponentsProps.isError]?: boolean;
+	[CommonComponentsProps.isLoading]?: boolean;
+	[CommonComponentsProps.isSuccess]?: boolean;
+	[CommonComponentsProps.onError]?: () => void;
+	[CommonComponentsProps.onSubmit]?: () => void;
+	[CommonComponentsProps.onClick]?: () => void;
+	[CommonComponentsProps.onToggle]?: () => void;
+	[CommonComponentsProps.value]?: any;
+	[CommonComponentsProps.dateFormat]?: string;
+	[CommonComponentsProps.timeFormat]?: string;
+	[CommonComponentsProps.type]?: string;
+	[CommonComponentsProps.children]?: JSX.Element | ReactNode; //TODO Проблема с выбором типа
+	[CommonComponentsProps.Icon]?: JSX.Element | ReactNode;
+	[CommonComponentsProps.placeholder]?: string;
+	[CommonComponentsProps.disabled]?: boolean;
+	[CommonComponentsProps.label]?: string;
+	[CommonComponentsProps.id]?: string;
+	[CommonComponentsProps.className]?: string;
+	[CommonComponentsProps.style]?: React.CSSProperties;
+	[CommonComponentsProps.required]?: boolean;
+	[CommonComponentsProps.min]?: number;
+	[CommonComponentsProps.max]?: number;
+	[CommonComponentsProps.step]?: number;
+	[CommonComponentsProps.options]?: Array<{ label: string; value: any }>; // Используем value для определения значения выбора
+	[CommonComponentsProps.multiple]?: boolean;
+	[CommonComponentsProps.rows]?: number;
+	[CommonComponentsProps.cols]?: number;
+	[CommonComponentsProps.maxLength]?: number;
+	[CommonComponentsProps.minLength]?: number;
+	[CommonComponentsProps.pattern]?: string;
+	[CommonComponentsProps.autoFocus]?: boolean;
 }
