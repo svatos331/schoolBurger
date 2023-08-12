@@ -1,5 +1,5 @@
 import React from "react";
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 import Button from "../index";
 import ButtonEnum from "../enum";
 
@@ -19,5 +19,18 @@ export const OrderButton: Story = {
 	args: {
 		type: ButtonEnum.enum_orderButton,
 		children: "Оформить заказ",
+	},
+};
+export const CartButton: Story = {
+	args: {
+		type: ButtonEnum.enum_cartButton,
+		children: "Добавить",
+	},
+};
+
+export const CategoryButton: Story = {
+	args: {
+		type: ButtonEnum.enum_categoryButton,
+		children: "Закуски",
 	},
 };
