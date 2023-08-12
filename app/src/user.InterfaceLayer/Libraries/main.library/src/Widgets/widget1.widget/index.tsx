@@ -10,10 +10,9 @@ const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 
 	return <div>data from jsonplaceholder : {JSON.stringify(data)}
 		{/* <Icon width={20} height={20} color="#FAFAFA" icon={Icons.House}  /> */}
+		<Typography type={Tags.h1} >gsgsgsdg</Typography>
+		<Typography type={Tags.h1} >ddd dd ddd</Typography>
 
-		<Typography type={Tags.h1} lineHeight={"50%"}>ddd <br /> ddd</Typography>
-		<Typography type={Tags.h1} lineHeight={"normal"}>ddd <br /> ddd</Typography>
-		<Typography type={Tags.h1} lineHeight={"100%"}>ddd <br /> ddd</Typography>
 		
 	</div>;
 };

@@ -3,6 +3,7 @@ import * as ST from "./styled";
 
 import { Tags} from "./enum";
 import { IText } from "./type";
+import { fonts } from "../../../constants/fonts";
 
 export const Typography: FC<IText> = ({
 	type,
@@ -17,11 +18,12 @@ export const Typography: FC<IText> = ({
 		case Tags.h1:
 			return (
 				<ST.H1
-					color={color?color:"FFFFFF"}
-					size={size?size:"50px"}
-					weight={weight?weight:800}
-					family={family?family:"'Nunito', sans-serif"} 
-					lineHeight={lineHeight}
+					color={color?color:"#FF5CFF"}
+					//size={size?size:"100px"}
+					//weight={weight?weight:800}
+					family={family?family:fonts.Nunito} 
+					lineHeight={lineHeight?lineHeight:"120%"}
+					mediaquery={["30px","36px","50px"]}
 				>
 					{children}
 				</ST.H1>

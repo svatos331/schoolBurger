@@ -12,4 +12,10 @@ export interface TextProps {
     weight?:number;
     lineHeight?:string;
     family?:string;
+    mediaquery?:string[];
   };
+
+// export type IMediaquery{
+//     min
+//     large
+// }
