@@ -1,13 +1,15 @@
 import React, { FC } from "react";
 import * as ST from "./styled";
 
-import { Tags, IText } from "./enum";
+import { Tags} from "./enum";
+import { IText } from "./type";
 
 export const Typography: FC<IText> = ({
 	type,
 	size,
 	color,
 	weight,
+
 	children,
 }) => {
 	switch (type) {
@@ -17,6 +19,7 @@ export const Typography: FC<IText> = ({
 					color={color}
 					size={size}
 					weight={weight}
+					family={"'Nunito', sans-serif"} 
 				>
 					{children}
 				</ST.H1>
@@ -27,6 +30,7 @@ export const Typography: FC<IText> = ({
 					color={color}
 					size={size}
 					weight={weight}
+					family={"'Nunito', sans-serif"} 
 				>
 					{children}
 				</ST.Span>
@@ -38,6 +42,7 @@ export const Typography: FC<IText> = ({
 						color={color}
 						size={size}
 						weight={weight}
+						family={"'Nunito', sans-serif"} 
 					>
 						{children}
 					</ST.H2>
@@ -50,6 +55,7 @@ export const Typography: FC<IText> = ({
 						color={color}
 						size={size}
 						weight={weight}
+						family={"'Nunito', sans-serif"} 
 					>
 						{children}
 					</ST.H3>
@@ -62,6 +68,7 @@ export const Typography: FC<IText> = ({
 						color={color}
 						size={size}
 						weight={weight}
+						family={"'Nunito', sans-serif"} 
 					>
 						{children}
 					</ST.P>
