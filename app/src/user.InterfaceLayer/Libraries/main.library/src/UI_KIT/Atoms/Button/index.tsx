@@ -3,22 +3,17 @@ import React, { FC } from "react";
 import * as ST from "./styled/styled";
 import ButtonType from "./type";
 import ButtonEnum from "./enum";
-import ButtonsMock from "./mock";
+import { IButtonPropsDefault } from "./mock";
 
-const Button: FC<ButtonType> = ({
-	children = ButtonsMock.children,
-	Icon,
-	type = ButtonsMock.type,
-	isLoading,
-}) => {
+const Button: FC<ButtonType> = ({ children, Icon, type, isLoading }) => {
 	switch (type) {
-		case ButtonEnum.enum_1: {
+		case ButtonEnum.enum_orderButton: {
 			return <ST.ButtonOrder isLoading={isLoading}>{children}</ST.ButtonOrder>;
 		}
-		case ButtonEnum.enum_2: {
+		case ButtonEnum.enum_cartButton: {
 			return <ST.ButtonCart isLoading={isLoading}>{children}</ST.ButtonCart>;
 		}
-		case ButtonEnum.enum_3: {
+		case ButtonEnum.enum_categoryButton: {
 			return (
 				<ST.ButtonCategory isLoading={isLoading}>
 					{Icon}
@@ -26,7 +21,7 @@ const Button: FC<ButtonType> = ({
 				</ST.ButtonCategory>
 			);
 		}
-		case ButtonEnum.enum_4: {
+		case ButtonEnum.enum_socialBtn: {
 			return (
 				<ST.ButtonSocial isLoading={isLoading}>{children}</ST.ButtonSocial>
 			);
@@ -37,4 +32,5 @@ const Button: FC<ButtonType> = ({
 	}
 };
 
+Button.defaultProps = IButtonPropsDefault;
 export default Button;

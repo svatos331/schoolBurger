@@ -1,25 +1,25 @@
-import ButtonEnum from "../enum";
+import ButtonEnum from "../../enum";
 
 const ButtonsConstants = {
-	[ButtonEnum.enum_1]: {
+	[ButtonEnum.enum_orderButton]: {
 		fontSize: "16px",
 		fontStyle: "normal",
 		fontWeight: 400,
 		lineHeight: "100%",
 	},
-	[ButtonEnum.enum_2]: {
+	[ButtonEnum.enum_cartButton]: {
 		fontSize: "16px",
 		fontStyle: "normal",
 		fontWeight: 400,
 		lineHeight: "100%",
 	},
-	[ButtonEnum.enum_3]: {
+	[ButtonEnum.enum_categoryButton]: {
 		fontSize: "16px",
 		fontStyle: "normal",
 		fontWeight: 400,
 		lineHeight: "100%",
 	},
-	[ButtonEnum.enum_4]: {
+	[ButtonEnum.enum_socialBtn]: {
 		fontSize: "16px",
 		fontStyle: "normal",
 		fontWeight: 400,

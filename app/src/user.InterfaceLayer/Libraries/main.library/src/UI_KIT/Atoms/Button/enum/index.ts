@@ -1,8 +1,8 @@
 enum ButtonEnum {
-	"enum_1" = "orderButton",
-	"enum_2" = "cartButton",
-	"enum_3" = "categoryButton",
-	"enum_4" = "socialBtn",
+	"enum_orderButton" = "orderButton",
+	"enum_cartButton" = "cartButton",
+	"enum_categoryButton" = "categoryButton",
+	"enum_socialBtn" = "socialBtn",
 }
 
 export default ButtonEnum;
