@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, memo} from "react";
 import * as ST from "./styled";
 
 import { Tags} from "./enum";
@@ -95,4 +95,4 @@ export const Typography: FC<IText> = ({
 	}
 };
 
-export default Typography;
+export default memo( Typography);
