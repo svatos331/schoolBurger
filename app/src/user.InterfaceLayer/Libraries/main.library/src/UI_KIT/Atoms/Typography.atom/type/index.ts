@@ -6,7 +6,12 @@ export interface IText extends TextProps {
     children?: JSX.Element | ReactNode;
 }
 
+export interface StyleComponentTextProps extends TextProps {
+    as?: keyof JSX.IntrinsicElements ;
+}
+
 export interface TextProps extends MediaQuerySize{
+    
     size?: string;
     color?: string;
     weight?:number;
@@ -14,14 +19,8 @@ export interface TextProps extends MediaQuerySize{
     family?:string;
 
   };
-
   export interface MediaQuerySize{
     smallMQ?:string;
     mediumMQ?:string;
     largeMQ?:string;
   }
-
-// export type IMediaquery{
-//     min
-//     large
-// }

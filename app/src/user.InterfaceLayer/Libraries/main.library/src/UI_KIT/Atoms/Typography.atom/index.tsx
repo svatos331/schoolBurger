@@ -18,9 +18,9 @@ export const Typography: FC<IText> = ({
 	largeMQ,
 }) => {
 	switch (as) {
-		case Tags.h1:
+		case Tags.p:
 			return (
-				<ST.H1
+				<ST.P
 					//color={color?color:"#ffffff"}
 					//size={size?size:"50px"}
 					weight={weight?weight:800}
@@ -32,60 +32,9 @@ export const Typography: FC<IText> = ({
 					
 				>
 					{children}
-				</ST.H1>
+				</ST.P>
 			);
-		case Tags.span:
-			return (
-				<ST.Span
-					color={color}
-					size={size}
-					weight={weight}
-					family={"'Nunito', sans-serif"} 
-
-				>
-					{children}
-				</ST.Span>
-			);
-		case Tags.h2:
-			return (
-				<>
-					<ST.H2
-						color={color}
-						size={size}
-						weight={weight}
-						family={"'Nunito', sans-serif"} 
-					>
-						{children}
-					</ST.H2>
-				</>
-			);
-		case Tags.h3:
-			return (
-				<>
-					<ST.H3
-						color={color}
-						size={size}
-						weight={weight}
-						family={"'Nunito', sans-serif"} 
-					>
-						{children}
-					</ST.H3>
-				</>
-			);
-		case Tags.p:
-			return (
-				<>
-					<ST.P
-						color={color}
-						size={size}
-						weight={weight}
-						family={"'Nunito', sans-serif"} 
-					>
-						{children}
-					</ST.P>
-				</>
-			);
-			
+		
 		default:
 			return (
 				<>
