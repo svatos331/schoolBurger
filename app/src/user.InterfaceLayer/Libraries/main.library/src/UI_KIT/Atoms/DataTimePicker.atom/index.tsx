@@ -20,6 +20,7 @@ const DataTimePicker: FC<IDatePickerProps> = ({
 	const view = useMemo(
 		() =>
 			!(isLoading || isError) ? (
+				//@ts-ignore
 				<DatePicker onChange={onChange} {...props}>
 					{children}
 				</DatePicker>
