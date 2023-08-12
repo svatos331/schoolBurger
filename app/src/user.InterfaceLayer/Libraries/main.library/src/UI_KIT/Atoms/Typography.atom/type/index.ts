@@ -2,18 +2,24 @@ import { ReactNode } from "react";
 import { Tags } from "../enum";
 
 export interface IText extends TextProps {
-    type: Tags;
+    as: Tags;
     children: JSX.Element | ReactNode;
 }
 
-export interface TextProps {
+export interface TextProps extends MediaQuerySize{
     size?: string;
     color?: string;
     weight?:number;
     lineHeight?:string;
     family?:string;
-    mediaquery?:string[];
+
   };
+
+  export interface MediaQuerySize{
+    smallMQ?:string;
+    mediumMQ?:string;
+    largeMQ?:string;
+  }
 
 // export type IMediaquery{
 //     min

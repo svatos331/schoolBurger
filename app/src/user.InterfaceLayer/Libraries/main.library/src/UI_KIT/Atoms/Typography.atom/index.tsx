@@ -6,24 +6,30 @@ import { IText } from "./type";
 import { fonts } from "../../../constants/fonts";
 
 export const Typography: FC<IText> = ({
-	type,
+	as,
 	size,
 	color,
 	weight,
 	family,
 	lineHeight,
 	children,
+	smallMQ,
+	mediumMQ,
+	largeMQ,
 }) => {
-	switch (type) {
+	switch (as) {
 		case Tags.h1:
 			return (
 				<ST.H1
-					color={color?color:"#FF5CFF"}
-					//size={size?size:"100px"}
-					//weight={weight?weight:800}
+					//color={color?color:"#ffffff"}
+					//size={size?size:"50px"}
+					weight={weight?weight:800}
 					family={family?family:fonts.Nunito} 
 					lineHeight={lineHeight?lineHeight:"120%"}
-					mediaquery={["30px","36px","50px"]}
+					smallMQ="30px"
+					mediumMQ="36px"
+					largeMQ="50px"
+					
 				>
 					{children}
 				</ST.H1>
@@ -35,6 +41,7 @@ export const Typography: FC<IText> = ({
 					size={size}
 					weight={weight}
 					family={"'Nunito', sans-serif"} 
+
 				>
 					{children}
 				</ST.Span>
@@ -78,6 +85,7 @@ export const Typography: FC<IText> = ({
 					</ST.P>
 				</>
 			);
+			
 		default:
 			return (
 				<>
