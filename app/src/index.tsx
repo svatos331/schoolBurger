@@ -13,6 +13,7 @@ import ToasterModalWindow from "./user.InterfaceLayer/Components/generalComponen
 import "user.InterfaceLayer/styles/default.style.css";
 import "user.InterfaceLayer/styles/global.style.css";
 import "user.InterfaceLayer/styles/scrollbar.style.css";
+import "user.InterfaceLayer/styles/fonts.style.css"
 
 const element = document.getElementById("app") as HTMLElement;
 const root = ReactDOM.createRoot(element);
