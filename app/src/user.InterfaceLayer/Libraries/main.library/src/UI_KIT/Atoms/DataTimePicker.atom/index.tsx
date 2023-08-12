@@ -20,14 +20,12 @@ const DataTimePicker: FC<IDatePickerProps> = ({
 	const view = useMemo(
 		() =>
 			!(isLoading || isError) ? (
-				<DatePicker
-					onChange={onChange}
-					{...props}
-				>
+				<DatePicker onChange={onChange} {...props}>
 					{children}
 				</DatePicker>
 			) : null,
-		[isLoading, isError]
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+		[isLoading, isError, onChange, children, ...Object.values(props)]
 	);
 	return <ST.DatePickerWrapper>{view}</ST.DatePickerWrapper>;
 };
