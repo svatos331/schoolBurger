@@ -1,8 +1,6 @@
 import styled from "styled-components";
-
-import BreakPoints from "../../../../../../../constants/breakPoints";
-
 import Colors from "../../../../constants/colors";
+import BreakPoints from "../../../../constants/breakPoints";
 
 export const DatePickerWrapper = styled.div`
 	margin-bottom: 2px;
