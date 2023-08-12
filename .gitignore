@@ -23,7 +23,14 @@ node_modules
 /app/npm-debug.log*
 /app/yarn-debug.log*
 /app/yarn-error.log*
-*.lock
+
+#locks
+
+yarn.lock
+package-lock.json
+*/yarn.lock
+*/package-lock.json
+
 app/yarn.lock
 .idea/vcs.xml
 .idea/prettier.xml
