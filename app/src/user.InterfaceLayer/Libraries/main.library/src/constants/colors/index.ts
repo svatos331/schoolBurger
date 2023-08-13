@@ -8,8 +8,7 @@ enum Colors {
 	ORANGE_HOVER = "#FFAB08",
 	ORANGE_ACTIVE = "#F86310",
 	WHITE_DEFAULT = "#F2F2F3",
-	GREY="#B1B1B1",
-	
+	GRAY="#B1B1B1",
 }
 
 export default Colors;
