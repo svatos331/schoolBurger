@@ -12,10 +12,10 @@ function style({
 	large_mq,
 	medium_mq,
 	small_mq,
-  font_style,
+	font_style,
 }: TextProps): String {
 	return `
-    font-size:  ${size?size:"16px"};
+    font-size:  ${size ? size : "16px"};
     font-weight:  ${weight};
     color: ${color ? color : "#000000"};
     font-family: ${family};
@@ -23,15 +23,12 @@ function style({
     font-style: ${font_style};
   @media (max-width: ${BreakPoints.TABLET + "px"}) {
     font-size:  ${size ? size : large_mq};
-    color:red;
   }
   @media (max-width: ${BreakPoints.MOBILE + "px"}) {
       font-size:  ${size ? size : medium_mq};
-      color:green;
    }
    @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
     font-size:   ${size ? size : small_mq};
-    color:blue;
   }
   `;
 }

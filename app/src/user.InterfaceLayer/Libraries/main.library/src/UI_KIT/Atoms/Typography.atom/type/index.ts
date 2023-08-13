@@ -12,7 +12,7 @@ export interface TextProps extends MediaQuerySize {
 	weight?: number;
 	line_height?: string;
 	family?: string;
-	font_style?:string;
+	font_style?: string;
 }
 export interface MediaQuerySize {
 	small_mq?: string;

@@ -1,6 +1,7 @@
 import React, { FC, memo } from "react";
 import * as ST from "./styled";
 
+import Colors from "../../../constants/colors";
 import { Tags } from "./enum";
 import { IText } from "./type";
 import { fonts } from "../../../constants/fonts";
@@ -23,7 +24,7 @@ export const Typography: FC<IText> = ({
 			return (
 				<>
 					<ST.H1
-						color={color ? color : "#ffffff"}
+						color={color ? color : Colors.BLACK}
 						size={size}
 						weight={weight ? weight : 800}
 						family={family ? family : fonts.Nunito}
@@ -41,7 +42,7 @@ export const Typography: FC<IText> = ({
 			return (
 				<>
 					<ST.H2
-						color={color ? color : "#000000"}
+						color={color ? color : Colors.BLACK}
 						size={size}
 						weight={weight ? weight : 600}
 						family={family ? family : fonts.Nunito}
@@ -57,7 +58,7 @@ export const Typography: FC<IText> = ({
 		case Tags.h3:
 			return (
 				<ST.H3
-					color={color ? color : "#000000"}
+					color={color ? color : Colors.BLACK}
 					size={size}
 					weight={weight ? weight : 600}
 					family={family ? family : fonts.Nunito}
@@ -72,7 +73,7 @@ export const Typography: FC<IText> = ({
 		case Tags.p:
 			return (
 				<ST.P
-					color={color ? color : "#000000"}
+					color={color ? color : Colors.BLACK}
 					size={size}
 					weight={weight ? weight : 400}
 					family={family ? family : fonts.Nunito}
@@ -88,7 +89,7 @@ export const Typography: FC<IText> = ({
 		case Tags.p1:
 			return (
 				<ST.P
-					color={color ? color : "#000000"}
+					color={color ? color : Colors.BLACK}
 					size={size ? size : "12px"}
 					weight={weight ? weight : 400}
 					family={family ? family : fonts.Nunito}
@@ -101,7 +102,7 @@ export const Typography: FC<IText> = ({
 		case Tags.p2:
 			return (
 				<ST.P
-					color={color ? color : "#000000"}
+					color={color ? color : Colors.BLACK}
 					size={size}
 					weight={weight ? weight : 400}
 					family={family ? family : fonts.Nunito}
@@ -116,7 +117,7 @@ export const Typography: FC<IText> = ({
 		case Tags.p3:
 			return (
 				<ST.P
-					color={color ? color : "#000000"}
+					color={color ? color : Colors.BLACK}
 					size={size}
 					weight={weight ? weight : 400}
 					family={family ? family : fonts.Nunito}
@@ -131,7 +132,7 @@ export const Typography: FC<IText> = ({
 		case Tags.span:
 			return (
 				<ST.Span
-					color={color ? color : "#000000"}
+					color={color ? color : Colors.BLACK}
 					size={size}
 					weight={weight ? weight : 800}
 					family={family ? family : fonts.Nunito}

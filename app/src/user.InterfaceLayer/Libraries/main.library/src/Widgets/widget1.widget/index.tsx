@@ -8,13 +8,20 @@ import { Tags } from "../../UI_KIT/Atoms/Typography.atom/enum";
 const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 	const { data } = useGetTodoQuery({ authToken: "", params: { id: "1" } });
 
-	return <div>data from jsonplaceholder : {JSON.stringify(data)}
-	
-		
-		<Typography as={Tags.h1} >Lorem ipsum dolor sit amet consectetur.</Typography>
-		<Typography as={Tags.p}  color="#FF5CFF"  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?</Typography>
-		
-	</div>;
+	return (
+		<div>
+			data from jsonplaceholder : {JSON.stringify(data)}
+			<Typography as={Tags.h1}>
+				Lorem ipsum dolor sit amet consectetur.
+			</Typography>
+			<Typography
+				as={Tags.p}
+				color="#FF5CFF"
+			>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?
+			</Typography>
+		</div>
+	);
 };
 
 export default Widget1;
