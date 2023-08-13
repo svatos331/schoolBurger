@@ -1,14 +1,16 @@
 import { ReactNode } from "react";
 import { Tags } from "../enum";
+import { ICommonComponentProps } from "../../../../constants/commonComponentProps";
+import Colors from "../../../../constants/colors";
 
 export interface IText extends TextProps {
 	as: Tags;
 	children?: JSX.Element | ReactNode;
 }
 
-export interface TextProps extends MediaQuerySize {
-	size?: string;
-	color?: string;
+export interface TextProps extends ICommonComponentProps,MediaQuerySize {
+	font_size?: string;
+	color?: string| Colors;
 	weight?: number;
 	line_height?: string;
 	family?: string;

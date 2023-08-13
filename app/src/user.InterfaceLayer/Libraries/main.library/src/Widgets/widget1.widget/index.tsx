@@ -17,9 +17,9 @@ const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 			<Typography
 				as={Tags.p}
 				color="#FF5CFF"
-			>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?
-			</Typography>
+				children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?"
+			/>
+			
 		</div>
 	);
 };

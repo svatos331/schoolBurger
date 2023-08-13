@@ -4,7 +4,7 @@ import BreakPoints from "../../../../constants/breakPoints";
 import { TextProps } from "../type";
 
 function style({
-	size,
+	font_size,
 	family,
 	line_height,
 	color,
@@ -15,20 +15,20 @@ function style({
 	font_style,
 }: TextProps): String {
 	return `
-    font-size:  ${size ? size : "16px"};
+    font-size:  ${font_size ? font_size : "16px"};
     font-weight:  ${weight};
     color: ${color ? color : "#000000"};
     font-family: ${family};
     line-height: ${line_height};
     font-style: ${font_style};
   @media (max-width: ${BreakPoints.TABLET + "px"}) {
-    font-size:  ${size ? size : large_mq};
+    font-size:  ${font_size ? font_size : large_mq};
   }
   @media (max-width: ${BreakPoints.MOBILE + "px"}) {
-      font-size:  ${size ? size : medium_mq};
+      font-size:  ${font_size ? font_size : medium_mq};
    }
    @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
-    font-size:   ${size ? size : small_mq};
+    font-size:   ${font_size ? font_size : small_mq};
   }
   `;
 }

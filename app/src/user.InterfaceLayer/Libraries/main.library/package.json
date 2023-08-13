@@ -47,8 +47,6 @@
     "dist"
   ],
   "dependencies": {
-    "styled-components": "^6.0.7",
-    "@types/react-datepicker": "^4.15.0",
-    "react-datepicker": "^4.16.0"
+    "styled-components": "^6.0.7"
   }
 }
