@@ -8,7 +8,6 @@ const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 
 	return <div>data from jsonplaceholder : {JSON.stringify(data)}
 		{/* <Icon width={20} height={20} color="#FAFAFA" icon={Icons.House}  /> */}
-
 	</div>;
 };
 

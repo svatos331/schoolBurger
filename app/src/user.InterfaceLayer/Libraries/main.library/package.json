@@ -15,8 +15,8 @@
     "build-storybook": "storybook build"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-dom": "*"
+    "react": "",
+    "react-dom": ""
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -33,12 +33,9 @@
     "@storybook/react": "7.2.1",
     "@storybook/react-webpack5": "7.2.1",
     "@storybook/testing-library": "0.2.0",
-    "@types/react": "^16.0.0",
     "babel-loader": "^8.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.2.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
     "storybook": "7.2.1",
     "style-loader": "^3.2.1",
     "ts-loader": "^9.2.5",
