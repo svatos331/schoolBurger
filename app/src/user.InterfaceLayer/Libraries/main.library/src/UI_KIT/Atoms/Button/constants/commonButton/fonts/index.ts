@@ -1,6 +1,6 @@
-import ButtonEnum from "../../enum";
+import ButtonEnum from "../../../enum";
 
-const ButtonsConstants = {
+const commonButtonFonts = {
 	[ButtonEnum.enum_orderButton]: {
 		fontSize: "16px",
 		fontStyle: "normal",
@@ -27,4 +27,4 @@ const ButtonsConstants = {
 	},
 };
 
-export default ButtonsConstants;
+export default commonButtonFonts;

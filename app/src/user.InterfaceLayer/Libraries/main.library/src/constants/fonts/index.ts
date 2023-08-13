@@ -1,3 +1,5 @@
-export enum fonts{
-    Nunito = "Nunito",
+enum FontsEnum {
+	Nunito = "Nunito",
 }
+
+export default FontsEnum;
