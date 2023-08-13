@@ -1,4 +1,4 @@
-import React, {FC, memo, useMemo} from "react";
+import React, { FC, memo, useMemo } from "react";
 
 import DatePicker from "react-datepicker";
 
@@ -21,14 +21,21 @@ const DataTimePicker: FC<IDatePickerProps> = ({
 		() =>
 			!(isLoading || isError) ? (
 				//@ts-ignore
-				<DatePicker onChange={onChange} {...props}>
+				<DatePicker
+					onChange={onChange}
+					{...props}
+				>
 					{children}
 				</DatePicker>
 			) : null,
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[isLoading, isError, onChange, children, ...Object.values(props)]
 	);
-	return <ST.DatePickerWrapper>{view}</ST.DatePickerWrapper>;
+	return (
+		<ST.DatePickerWrapper data-testid="time-date-picker">
+			{view}
+		</ST.DatePickerWrapper>
+	);
 };
 DataTimePicker.defaultProps = IDataTimePickerPropsDefault;
 
