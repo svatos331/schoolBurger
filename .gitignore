@@ -23,7 +23,14 @@ node_modules
 /app/npm-debug.log*
 /app/yarn-debug.log*
 /app/yarn-error.log*
-*.lock
+
+#locks
+
+yarn.lock
+package-lock.json
+*/yarn.lock
+*/package-lock.json
+
 app/yarn.lock
 .idea/vcs.xml
 .idea/prettier.xml
@@ -34,9 +41,7 @@ app/yarn.lock
 .idea/schoolBurger.iml
 app/src/user.InterfaceLayer/Libraries/main.library/yarn-error.log
 app/src/user.InterfaceLayer/Libraries/main.library/yarn.lock
-app/yarn.lock
-app/src/user.InterfaceLayer/Libraries/main.library/yarn.lock
-app/yarn.lock
+./yarn.lock
 .idea/workspace.xml
 .idea/shelf/Uncommitted_changes_before_Update_at_12_08_2023_0_00__Changes_.xml
 .idea/shelf/Uncommitted_changes_before_Update_at_12_08_2023_0_00_\[Changes\]/shelved.patch
