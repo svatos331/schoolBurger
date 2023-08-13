@@ -11,21 +11,27 @@ export const Typography: FC<IText> = ({
 	color,
 	weight,
 	family,
-	lineHeight,
+	line_height,
 	children,
-	smallMQ,
-	mediumMQ,
-	largeMQ,
+	small_mq,
+	medium_mq,
+	large_mq,
+	font_style,
 }) => {
 	switch (as) {
 		case Tags.h1:
 			return (
 				<>
 					<ST.H1
-						color={color}
+						color={color ? color : "#ffffff"}
 						size={size}
-						weight={weight}
-						family={"'Nunito', sans-serif"}
+						weight={weight ? weight : 800}
+						family={family ? family : fonts.Nunito}
+						line_height={line_height ? line_height : "120%"}
+						small_mq={small_mq ? small_mq : "30px"}
+						medium_mq={medium_mq ? medium_mq : "36px"}
+						large_mq={large_mq ? large_mq : "50px"}
+						font_style={font_style?font_style:"italic"}
 					>
 						{children}
 					</ST.H1>
@@ -34,14 +40,15 @@ export const Typography: FC<IText> = ({
 		case Tags.p:
 			return (
 				<ST.P
-					color={color?color:"#ffffff"}
-					size={size?size:"50px"}
-					weight={weight ? weight : 800}
+					color={color ? color : "#ffffff"}
+					size={size}
+					weight={weight ? weight : 400}
 					family={family ? family : fonts.Nunito}
-					lineHeight={lineHeight ? lineHeight : "120%"}
-					smallMQ="30px"
-					mediumMQ="36px"
-					largeMQ="50px"
+					line_height={line_height ? line_height : "130%"}
+					
+					medium_mq={medium_mq ? medium_mq : "12px"}
+					large_mq={large_mq ? large_mq : "16px"}
+					font_style={font_style?font_style:"italic"}
 				>
 					{children}
 				</ST.P>
@@ -49,13 +56,12 @@ export const Typography: FC<IText> = ({
 		case Tags.span:
 			return (
 				<ST.Span
-					as="span"
 					weight={weight ? weight : 800}
 					family={family ? family : fonts.Nunito}
-					lineHeight={lineHeight ? lineHeight : "120%"}
-					smallMQ="30px"
-					mediumMQ="36px"
-					largeMQ="50px"
+					line_height={line_height ? line_height : "120%"}
+					small_mq="30px"
+					medium_mq="36px"
+					large_mq="50px"
 				>
 					{children}
 				</ST.Span>
@@ -64,7 +70,6 @@ export const Typography: FC<IText> = ({
 			return (
 				<>
 					<ST.H2
-						as="h2"
 						color={color}
 						size={size}
 						weight={weight}
@@ -87,6 +92,7 @@ export const Typography: FC<IText> = ({
 					</ST.H3>
 				</>
 			);
+
 		default:
 			return (
 				<>

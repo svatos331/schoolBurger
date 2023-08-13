@@ -6,30 +6,31 @@ import { TextProps } from "../type";
 function style({
 	size,
 	family,
-	lineHeight,
+	line_height,
 	color,
 	weight,
-	largeMQ,
-	mediumMQ,
-	smallMQ,
+	large_mq,
+	medium_mq,
+	small_mq,
+  font_style,
 }: TextProps): String {
 	return `
-    font-size:  ${size ? size : "30px"};
+    font-size:  ${size?size:"16px"};
     font-weight:  ${weight};
     color: ${color ? color : "#000000"};
     font-family: ${family};
-    line-height: ${lineHeight};
-    
+    line-height: ${line_height};
+    font-style: ${font_style};
   @media (max-width: ${BreakPoints.TABLET + "px"}) {
-    font-size:  ${size ? size : largeMQ};
+    font-size:  ${size ? size : large_mq};
     color:red;
   }
   @media (max-width: ${BreakPoints.MOBILE + "px"}) {
-      font-size:  ${size ? size : mediumMQ};
+      font-size:  ${size ? size : medium_mq};
       color:green;
    }
    @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
-    font-size:   ${size ? size : smallMQ};
+    font-size:   ${size ? size : small_mq};
     color:blue;
   }
   `;
