@@ -44,7 +44,7 @@ export const DatePickerWrapper = styled.div<{
 				$disabled
 					? css`
 							background-color: ${Colors.BUTTON_DISABLED_BG};
-							color: ${Colors.GRAY};
+							color: ${Colors.BUTTON_DISABLED_TEXT};
 					  `
 					: css`
 							background-color: ${Colors.WHITE_DEFAULT};
@@ -120,7 +120,6 @@ export const DatePickerWrapper = styled.div<{
 		width: 1px;
 		content: "";
 		z-index: -1;
-		border-width: 8px;
 		left: -8px;
 	}
 
