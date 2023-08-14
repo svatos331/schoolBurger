@@ -19,27 +19,13 @@ const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 				as={Tags.p}
 				color="#a746a7"
 				children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?"
+				// large_mq="40px"
+				// large_extra_mq="60px"
+				// medium_mq="20px"
+				// small_mq="12px"
+				font_size="29px"
 			/>
-			<Typography
-				as={Tags.h1}
-				color="#093f10"
-				children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?"
-			/>
-			<Typography
-				as={Tags.h2}
-				color="#885cff"
-				children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?"
-			/>
-			<Typography
-				as={Tags.h3}
-				color="#27b8bd"
-				children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?"
-			/>
-			<Typography
-				as={Tags.p}
-				color="#dd3f4c"
-				children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?"
-			/>
+			
 		</div>
 	);
 };

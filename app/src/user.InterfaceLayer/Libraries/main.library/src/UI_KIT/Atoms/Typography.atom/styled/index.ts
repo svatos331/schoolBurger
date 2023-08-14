@@ -17,25 +17,36 @@ function style({
 }: TextProps): String {
 	return `
     font-size:  ${font_size ? font_size : "inherit"};
-    font-weight:  ${weight?weight:"inherit"};
+    font-weight:  ${weight ? weight : "inherit"};
     color: ${color ? color : "inherit"};
-    font-family: ${family?family:"inherit"};
-    line-height: ${line_height?line_height:"inherit"};
-    font-style: ${font_style?font_style:"inherit"};
- 
-  @media  (max-width:${BreakPoints.EXTRA_TABLET + "px"} ) or
+    font-family: ${family ? family : "inherit"};
+    line-height: ${line_height ? line_height : "inherit"};
+    font-style: ${font_style ? font_style : "inherit"};
+ ${
+		large_extra_mq &&
+		` @media  (max-width:${BreakPoints.EXTRA_TABLET + "px"} ) or
     (width > ${BreakPoints.EXTRA_TABLET + "px"} )  {
-    font-size:  ${font_size ? font_size : large_extra_mq };
-  }
-  @media (max-width: ${BreakPoints.TABLET + "px"}) {
-    font-size:  ${font_size ? font_size : large_mq};
-  }
-  @media (max-width: ${BreakPoints.MOBILE + "px"}) {
-    font-size:  ${font_size ? font_size : medium_mq};
-  }
-  @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
-    font-size:   ${font_size ? font_size : small_mq};
-  }
+    font-size:  ${large_extra_mq};
+  }`
+ }
+ ${
+		large_mq &&
+		`@media (max-width: ${BreakPoints.TABLET + "px"}) {
+    font-size:  ${large_mq};
+  }`
+ }
+ ${
+		medium_mq &&
+		` @media (max-width: ${BreakPoints.MOBILE + "px"}) {
+    font-size:  ${medium_mq};
+  }`
+ }
+${
+	small_mq &&
+	` @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
+    font-size:   ${small_mq};
+  }`
+}
   `;
 }
 export const P = styled.p<TextProps>((props) => {
