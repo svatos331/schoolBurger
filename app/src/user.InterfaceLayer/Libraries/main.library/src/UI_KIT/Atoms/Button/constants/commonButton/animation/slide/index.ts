@@ -5,15 +5,6 @@ export const slideBackground = css`
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-	&::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -2;
-	}
 	&::before {
 		content: "";
 		position: absolute;
