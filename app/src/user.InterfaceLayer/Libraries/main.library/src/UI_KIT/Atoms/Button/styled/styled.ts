@@ -40,6 +40,7 @@ export const ButtonCart = styled.button<Button>`
 
 export const ButtonCategory = styled.button<Button>`
 	${commonButtonStyles}
+	width:auto;
 	padding: 8px 14px;
 	border-radius: 50px;
 	border: 1px solid transparent;
@@ -77,6 +78,12 @@ export const ButtonSocial = styled.button<Button>`
 		}
 	}
 `;
+
+export const ButtonImage = styled.img<Button>`
+	max-width: 24px;
+	margin-right: 8px;
+`;
+
 
 export const Button = styled.div<Button>`
 	${commonButtonStyles}
