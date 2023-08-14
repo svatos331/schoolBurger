@@ -1,33 +1,31 @@
 import React, { useCallback } from "react";
-import { IInputProps, inputTypeEnum } from "./type/index";
-import { InputMask, checkType, setDateRange } from "./utils/index";
-import * as ST from "./styled/index";
-import { InputPropsDefaultDate, dataTestId } from "./const";
+import { IInputProps } from "./type";
+import * as ST from "./styled";
+import { InputPropsDefaultProps, dataTestId } from "./const";
+import { InputTypeEnum } from "./enum";
+import { InputMask, checkType } from "./utils";
 
 const Input: React.FC<IInputProps> = (props: IInputProps) => {
+	if (props.isError) return <ST.Error>Произошла ошибка</ST.Error>;
+
 	const {
 		className,
 		value,
 		onChange,
 		type,
 		placeholder,
-		max,
-		isError,
 		isLoading,
 		autoFocus,
 		...otherProps
 	} = props;
 
+	// eslint-disable-next-line react-hooks/rules-of-hooks
 	const onChangeHandler = useCallback(
 		(e: React.ChangeEvent<HTMLInputElement>) => {
 			onChange?.(InputMask(type, e.target.value));
 		},
 		[onChange, type]
 	);
-
-	if (isError) {
-		return <ST.Error>Произошла ошибка</ST.Error>;
-	}
 
 	return (
 		<>
@@ -38,16 +36,15 @@ const Input: React.FC<IInputProps> = (props: IInputProps) => {
 					data-testid={dataTestId}
 					autoFocus={autoFocus}
 					value={value}
-					type={checkType(type) ? inputTypeEnum.TEXT : type}
-					onChange={onChangeHandler}
+					type={checkType(type) ? InputTypeEnum.TEXT : type}
+					onInput={onChangeHandler}
 					placeholder={placeholder}
-					{...(type === inputTypeEnum.DATE &&
-						setDateRange(max || InputPropsDefaultDate))}
 					{...otherProps}
 				/>
 			)}
 		</>
 	);
 };
+Input.defaultProps = InputPropsDefaultProps;
 
 export default Input;

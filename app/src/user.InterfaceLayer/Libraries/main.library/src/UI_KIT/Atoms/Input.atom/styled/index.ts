@@ -1,5 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Colors from "../../../../constants/colors";
+import load from "./animations/load";
 
 export const InputStyle = styled.input`
 	outline: none;
@@ -14,7 +15,6 @@ export const InputStyle = styled.input`
 	border: 2px solid ${Colors.WHITE_DEFAULT};
 	background: ${Colors.WHITE};
 	cursor: pointer;
-	display: flex;
 
 	&:active,
 	&:focus,
@@ -34,6 +34,9 @@ export const InputStyle = styled.input`
 			border: 1px solid ${Colors.ORANGE_HOVER};
 		}
 	}
+	&::-webkit-calendar-picker-indicator {
+		display: none;
+	}
 
 	@media (max-width: 426px) {
 		font-size: 12px;
@@ -48,17 +51,8 @@ export const Error = styled.div`
 	font-size: 25px;
 `;
 
-const load = keyframes`
-    from {
-        left: -150px;
-    }
-    to {
-        left: 100%;
-    }
-`;
-
 export const Skeleton = styled.div`
-	width: 400px;
+	width: 100%;
 	padding: 12px;
 	border-radius: 12px;
 	height: 40px;

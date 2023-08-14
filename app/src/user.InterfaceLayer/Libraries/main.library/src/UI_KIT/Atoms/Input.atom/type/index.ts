@@ -1,33 +1,10 @@
-import { type } from "os";
 import {
 	CommonComponentsProps,
 	ICommonComponentProps,
 } from "../../../../constants/commonComponentProps";
+import { InputTypeEnum } from "../enum";
 
-export enum inputTypeEnum {
-	NUMBER = "number",
-	TEXT = "text",
-	CVV = "cvv",
-	CARD_DATE = "cardDate",
-	CARD = "card",
-	DATE = "datetime-local",
-	TEXT_ONLY = "textOnly",
-	TEL = "tel",
-	EMAIL = "email",
-	PASSWORD = "password",
-}
-
-export enum likeTxtTypeEnum {
-	number = "number",
-	text = "text",
-	tel = "tel",
-	textOnly = "textOnly",
-	card = "card",
-	cvv = "cvv",
-	cardDate = "cardDate",
-}
-
-type extendsCommonType = Pick<
+type ExtendsCommonType = Pick<
 	ICommonComponentProps,
 	| CommonComponentsProps.className
 	| CommonComponentsProps.maxLength
@@ -40,18 +17,18 @@ type extendsCommonType = Pick<
 	| CommonComponentsProps.disabled
 >;
 
-type requiredProps = Pick<ICommonComponentProps, CommonComponentsProps.value>;
+type RequiredProps = Pick<ICommonComponentProps, CommonComponentsProps.value>;
 
 export interface IInputProps
-	extends extendsCommonType,
-		Required<requiredProps> {
+	extends ExtendsCommonType,
+		Required<RequiredProps> {
 	readonly?: boolean;
-	type: inputTypeEnum;
+	type: InputTypeEnum;
 	onChange: (val: string) => void;
 }
 
-export interface testProps {
-	type: inputTypeEnum;
+export interface TestProps {
+	type: InputTypeEnum;
 	isError?: boolean;
 	isLoading?: boolean;
 }
