@@ -4,7 +4,12 @@ import * as ST from "./styled/styled";
 import ButtonType from "./type";
 import ButtonEnum from "./enum";
 import { IButtonPropsDefault } from "./mock";
-import { categoryData } from "./constants/commonButton/data";
+import {
+	categoryData,
+	categoryDataProps,
+	socialData,
+	socialDataProps,
+} from "./constants/commonButton/data";
 
 const Button: FC<ButtonType> = ({ children, Icon, type, isLoading }) => {
 	switch (type) {
@@ -17,13 +22,13 @@ const Button: FC<ButtonType> = ({ children, Icon, type, isLoading }) => {
 		case ButtonEnum.enum_categoryButton: {
 			return (
 				<>
-					{categoryData.map((category: any) => (
+					{categoryData.map((category: categoryDataProps) => (
 						<ST.ButtonCategory
 							key={category.id}
 							isLoading={isLoading}
 						>
 							{category.url && (
-								<ST.ButtonImage
+								<ST.ButtonCategoryImage
 									src={category.url}
 									alt={category.name}
 								/>
@@ -36,7 +41,15 @@ const Button: FC<ButtonType> = ({ children, Icon, type, isLoading }) => {
 		}
 		case ButtonEnum.enum_socialBtn: {
 			return (
-				<ST.ButtonSocial isLoading={isLoading}>{children}</ST.ButtonSocial>
+				<>
+					{socialData.map((social: socialDataProps) => (
+						<ST.ButtonSocial
+							key={social.id}
+							isLoading={isLoading}
+							dangerouslySetInnerHTML={{ __html: social.url }}
+						/>
+					))}
+				</>
 			);
 		}
 		default: {

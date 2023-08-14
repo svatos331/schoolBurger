@@ -70,20 +70,19 @@ export const ButtonSocial = styled.button<Button>`
 	margin: 0;
 	padding: 0;
 	svg {
-		transition: all 0.8s ease;
+		transition: all 0.3s ease;
 		cursor: pointer;
-		fill: ${Colors.ORANGE_ACTIVE};
+		fill: ${Colors.ORANGE_DEFAULT};
 		&:hover {
 			fill: ${Colors.ORANGE_HOVER};
 		}
 	}
 `;
 
-export const ButtonImage = styled.img<Button>`
+export const ButtonCategoryImage = styled.img<Button>`
 	max-width: 24px;
 	margin-right: 8px;
 `;
-
 
 export const Button = styled.div<Button>`
 	${commonButtonStyles}
