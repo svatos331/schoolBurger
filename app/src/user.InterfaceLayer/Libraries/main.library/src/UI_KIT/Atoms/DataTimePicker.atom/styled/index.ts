@@ -123,10 +123,7 @@ export const DatePickerWrapper = styled.div<{
 		left: -8px;
 	}
 
-	.react-datepicker-popper[data-placement^="top"]
-		.react-datepicker__triangle::before,
-	.react-datepicker-popper[data-placement^="bottom"]
-		.react-datepicker__triangle::before {
+	.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before {
 		border-bottom-color: ${Colors.ORANGE_ACTIVE};
 	}
 
