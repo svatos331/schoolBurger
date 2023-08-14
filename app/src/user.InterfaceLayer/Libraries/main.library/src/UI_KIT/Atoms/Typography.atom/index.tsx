@@ -1,5 +1,6 @@
 import React, { FC, memo } from "react";
 import * as ST from "./styled";
+
 import Colors from "../../../constants/colors";
 import { Tags } from "./enum";
 import { IText } from "./type";
