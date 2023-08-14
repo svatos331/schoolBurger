@@ -9,6 +9,7 @@ function style({
 	line_height,
 	color,
 	weight,
+	large_extra_mq,
 	large_mq,
 	medium_mq,
 	small_mq,
@@ -21,13 +22,18 @@ function style({
     font-family: ${family};
     line-height: ${line_height};
     font-style: ${font_style};
+ 
+  @media  (max-width:${BreakPoints.EXTRA_TABLET + "px"} ) or
+    (width > ${BreakPoints.EXTRA_TABLET + "px"} )  {
+    font-size:  ${font_size ? font_size : large_extra_mq};
+  }
   @media (max-width: ${BreakPoints.TABLET + "px"}) {
     font-size:  ${font_size ? font_size : large_mq};
   }
   @media (max-width: ${BreakPoints.MOBILE + "px"}) {
-      font-size:  ${font_size ? font_size : medium_mq};
-   }
-   @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
+    font-size:  ${font_size ? font_size : medium_mq};
+  }
+  @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
     font-size:   ${font_size ? font_size : small_mq};
   }
   `;

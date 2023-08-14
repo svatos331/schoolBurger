@@ -13,6 +13,7 @@ const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 			data from jsonplaceholder : {JSON.stringify(data)}
 			<Typography as={Tags.h1}>
 				Lorem ipsum dolor sit amet consectetur.
+				<Typography as={Tags.span} color="#FF5CFF" children="sit amet consectetur."/>
 			</Typography>
 			<Typography
 				as={Tags.p}

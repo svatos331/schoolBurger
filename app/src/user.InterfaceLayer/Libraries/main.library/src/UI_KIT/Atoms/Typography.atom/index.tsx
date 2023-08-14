@@ -4,7 +4,8 @@ import * as ST from "./styled";
 import Colors from "../../../constants/colors";
 import { Tags } from "./enum";
 import { IText } from "./type";
-import { fonts } from "../../../constants/fonts";
+import  FontsEnum  from "../../../constants/fonts";
+
 export const Typography: FC<IText> = ({
 	as,
 	font_size,
@@ -16,6 +17,7 @@ export const Typography: FC<IText> = ({
 	small_mq,
 	medium_mq,
 	large_mq,
+	large_extra_mq,
 	font_style,
 }) => {
 	switch (as) {
@@ -24,8 +26,8 @@ export const Typography: FC<IText> = ({
 					<ST.H1
 						color={color ? color : Colors.BLACK}
 						font_size={font_size}
-						weight={weight ? weight : 800}
-						family={family ? family : fonts.Nunito}
+						weight={weight ? weight : "800"}
+						family={family ? family : FontsEnum.Nunito}
 						line_height={line_height ? line_height : "120%"}
 						small_mq={small_mq ? small_mq : "30px"}
 						medium_mq={medium_mq ? medium_mq : "36px"}
@@ -40,8 +42,8 @@ export const Typography: FC<IText> = ({
 					<ST.H2
 						color={color ? color : Colors.BLACK}
 						font_size={font_size}
-						weight={weight ? weight : 600}
-						family={family ? family : fonts.Nunito}
+						weight={weight ? weight : "600"}
+						family={family ? family : FontsEnum.Nunito}
 						line_height={line_height ? line_height : "120%"}
 						medium_mq={medium_mq ? medium_mq : "28px"}
 						large_mq={large_mq ? large_mq : "40px"}
@@ -55,8 +57,8 @@ export const Typography: FC<IText> = ({
 				<ST.H3
 					color={color ? color : Colors.BLACK}
 					font_size={font_size}
-					weight={weight ? weight : 600}
-					family={family ? family : fonts.Nunito}
+					weight={weight ? weight : "600"}
+					family={family ? family : FontsEnum.Nunito}
 					line_height={line_height ? line_height : "100%"}
 					medium_mq={medium_mq ? medium_mq : "16px"}
 					large_mq={large_mq ? large_mq : "24px"}
@@ -70,8 +72,8 @@ export const Typography: FC<IText> = ({
 				<ST.P
 					color={color ? color : Colors.BLACK}
 					font_size={font_size}
-					weight={weight ? weight : 400}
-					family={family ? family : fonts.Nunito}
+					weight={weight ? weight : "400"}
+					family={family ? family : FontsEnum.Nunito}
 					line_height={line_height ? line_height : "normal"}
 					medium_mq={medium_mq ? medium_mq : "12px"}
 					large_mq={large_mq ? large_mq : "16px"}
@@ -86,8 +88,8 @@ export const Typography: FC<IText> = ({
 				<ST.P
 					color={color ? color : Colors.BLACK}
 					font_size={font_size ? font_size : "12px"}
-					weight={weight ? weight : 400}
-					family={family ? family : fonts.Nunito}
+					weight={weight ? weight : "400"}
+					family={family ? family : FontsEnum.Nunito}
 					line_height={line_height ? line_height : "normal"}
 					font_style={font_style ? font_style : "normal"}
 				>
@@ -99,8 +101,8 @@ export const Typography: FC<IText> = ({
 				<ST.P
 					color={color ? color : Colors.BLACK}
 					font_size={font_size}
-					weight={weight ? weight : 400}
-					family={family ? family : fonts.Nunito}
+					weight={weight ? weight : "400"}
+					family={family ? family : FontsEnum.Nunito}
 					line_height={line_height ? line_height : "100%"}
 					medium_mq={medium_mq ? medium_mq : "10px"}
 					large_mq={large_mq ? large_mq : "12px"}
@@ -114,8 +116,8 @@ export const Typography: FC<IText> = ({
 				<ST.P
 					color={color ? color : Colors.BLACK}
 					font_size={font_size}
-					weight={weight ? weight : 400}
-					family={family ? family : fonts.Nunito}
+					weight={weight ? weight : "400"}
+					family={family ? family : FontsEnum.Nunito}
 					line_height={line_height ? line_height : "120%"}
 					medium_mq={medium_mq ? medium_mq : "18px"}
 					large_mq={large_mq ? large_mq : "24px"}
@@ -127,14 +129,14 @@ export const Typography: FC<IText> = ({
 		case Tags.span:
 			return (
 				<ST.Span
-					color={color ? color : Colors.BLACK}
+					color={color ? color : "inherit"}
 					font_size={font_size}
-					weight={weight ? weight : 800}
-					family={family ? family : fonts.Nunito}
-					line_height={line_height ? line_height : "130%"}
-					medium_mq={medium_mq ? medium_mq : "12px"}
-					large_mq={large_mq ? large_mq : "16px"}
-					font_style={font_style ? font_style : "normal"}
+					weight={weight ? weight :"inherit"}
+					family={family ? family : "inherit"}
+					line_height={line_height ? line_height : "inherit"}
+					medium_mq={medium_mq ? medium_mq : "inherit"}
+					large_mq={large_mq ? large_mq : "inherit"}
+					font_style={font_style ? font_style : "inherit"}
 				>
 					{children}
 				</ST.Span>
