@@ -22,12 +22,19 @@ export const slideBackground = css`
 		width: 0%;
 		height: 100%;
 		background: ${Colors.ORANGE_HOVER};
-		transition: all 0.3s;
+		transition: all 0.5s ease;
 		z-index: -1;
 	}
 	&:hover {
 		&::before {
 			width: 100%;
+		}
+	}
+	&:active {
+		&::before {
+			width: 100%;
+			background: ${Colors.ORANGE_ACTIVE} !important;
+			z-index: -3;
 		}
 	}
 `;

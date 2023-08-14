@@ -10,8 +10,13 @@ export const commonButtonStyles = css`
 	flex-shrink: 0;
 	gap: 10px;
 	cursor: pointer;
+	transition: all 0.3s ease;
 	font-family: ${FontsEnum.Nunito};
 	&:active {
 		background: ${Colors.ORANGE_ACTIVE};
+	}
+	&:disabled {
+		background: ${Colors.BUTTON_DISABLED_BG};
+		color: ${Colors.BUTTON_DISABLED_TEXT};
 	}
 `;

@@ -13,33 +13,12 @@ export const ButtonOrder = styled.button<Button>`
 	${slideBackground};
 	border-radius: 12px;
 	padding: 12px 14px;
-	// transition: all 0.3s ease;
+	background: ${Colors.ORANGE_DEFAULT};
 	color: ${Colors.WHITE};
 	font-size: ${commonButtonFonts[ButtonEnum.enum_orderButton].fontSize};
 	font-style: ${commonButtonFonts[ButtonEnum.enum_orderButton].fontStyle};
 	font-weight: ${commonButtonFonts[ButtonEnum.enum_orderButton].fontWeight};
 	line-height: ${commonButtonFonts[ButtonEnum.enum_orderButton].lineHeight};
-	transition: all 0.3s;
-	position: relative;
-	overflow: hidden;
-	z-index: 1;
-	&:after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: ${Colors.ORANGE_DEFAULT};
-		z-index: -2;
-	}
-	&:active {
-		background: ${Colors.ORANGE_ACTIVE};
-	}
-	&:disabled {
-		background: ${Colors.BUTTON_DISABLED_BG};
-		color: ${Colors.BUTTON_DISABLED_TEXT};
-	}
 `;
 
 export const ButtonCart = styled.button<Button>`
@@ -47,22 +26,15 @@ export const ButtonCart = styled.button<Button>`
 	${slideBackground};
 	padding: 12px 14px;
 	border-radius: 12px;
-	// transition: all 0.3s ease;
 	color: ${Colors.BLACK};
 	background: ${Colors.WHITE_DEFAULT};
 	font-size: ${commonButtonFonts[ButtonEnum.enum_cartButton].fontSize};
 	font-style: ${commonButtonFonts[ButtonEnum.enum_cartButton].fontStyle};
 	font-weight: ${commonButtonFonts[ButtonEnum.enum_cartButton].fontWeight};
 	line-height: ${commonButtonFonts[ButtonEnum.enum_cartButton].lineHeight};
-	position: relative;
-	overflow: hidden;
-	z-index: 1;
-	&:active {
-		background: ${Colors.ORANGE_ACTIVE};
-	}
-	&:disabled {
-		background: ${Colors.BUTTON_DISABLED_BG};
-		color: ${Colors.BUTTON_DISABLED_TEXT};
+	&:hover,
+	active {
+		color: ${Colors.WHITE};
 	}
 `;
 
@@ -70,9 +42,8 @@ export const ButtonCategory = styled.button<Button>`
 	${commonButtonStyles}
 	padding: 8px 14px;
 	border-radius: 50px;
-	background: ${Colors.WHITE};
-	transition: all 0.5s ease;
 	border: 1px solid transparent;
+	background: ${Colors.WHITE};
 	color: ${Colors.BLACK};
 	font-size: ${commonButtonFonts[ButtonEnum.enum_categoryButton].fontSize};
 	font-style: ${commonButtonFonts[ButtonEnum.enum_categoryButton].fontStyle};
