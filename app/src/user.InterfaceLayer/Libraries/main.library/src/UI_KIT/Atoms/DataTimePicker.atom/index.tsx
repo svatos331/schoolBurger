@@ -1,66 +1,60 @@
-import React, { FC, memo, useMemo } from "react";
+import React, { FC, memo, useCallback, useMemo, useState } from "react";
 
 import DatePicker from "react-datepicker";
 
 import { IDatePickerProps } from "./type";
 
 import * as ST from "./styled";
-//@ts-ignore
-import style from "./styled/styled.module.css"; ////TODO: не работает почему-то declare в custom.d.ts - возможно нужен плагин для tsconfig
 
 import { IDataTimePickerPropsDefault } from "./mock";
 
-import "react-datepicker/dist/react-datepicker.module.css";
-
-const DataTimePicker: FC<IDatePickerProps> = (
-	props = IDataTimePickerPropsDefault
-) => {
-	const { isLoading, isError, children } = props;
-
+const DataTimePicker: FC<IDatePickerProps> = ({
+	isLoading,
+	isError,
+	children,
+	disabledInput,
+	onChangeRaw,
+	inline,
+	...props
+}) => {
 	const shouldBeRender = useMemo(
 		() => !(isLoading || isError),
 		[isLoading, isError]
 	);
-	const {
-		calendarClassName,
-		timeClassName,
-		dayClassName,
-		className,
-		clearButtonClassName,
-		popperClassName,
-		monthClassName,
-		weekDayClassName,
-		wrapperClassName,
-	} = style;
-	const classes = useMemo(() => {
-		return {
-			wrapperClassName,
-			className,
-			clearButtonClassName,
-			popperClassName,
-			calendarClassName: calendarClassName,
-			dayClassName: () => dayClassName,
-			timeClassName: () => timeClassName,
-			monthClassName: () => monthClassName,
-			weekDayClassName: () => weekDayClassName,
-		};
-	}, [
-		calendarClassName,
-		timeClassName,
-		dayClassName,
-		className,
-		clearButtonClassName,
-		popperClassName,
-		monthClassName,
-		weekDayClassName,
-		wrapperClassName,
-	]);
+	const [animate, setAnimate] = useState(false);
+	const [continueAnimation, setContinueAnimation] = useState(false);
+
+	const animation = useMemo(
+		() => animate && continueAnimation,
+		[animate, continueAnimation]
+	);
+
+	const handleDivClick = useCallback(() => {
+		setAnimate(true);
+		setContinueAnimation(true);
+		setTimeout(() => {
+			setContinueAnimation(false);
+		}, 500);
+	}, [animate, continueAnimation]);
+
 	return (
-		<ST.DatePickerWrapper data-testid="time-date-picker">
+		<ST.DatePickerWrapper
+			$animation={animation}
+			$disabled={disabledInput}
+			data-testid="time-date-picker"
+		>
 			{shouldBeRender ? (
 				<DatePicker
+					inline={!disabledInput && inline}
+					disabled={disabledInput}
 					{...props}
-					{...classes}
+					onChangeRaw={(e) => {
+						handleDivClick();
+						onChangeRaw!(e);
+					}}
+					onInputClick={() => {
+						handleDivClick();
+					}}
 				>
 					{children}
 				</DatePicker>
