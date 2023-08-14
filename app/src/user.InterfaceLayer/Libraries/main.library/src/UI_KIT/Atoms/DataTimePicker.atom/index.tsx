@@ -17,23 +17,21 @@ const DataTimePicker: FC<IDatePickerProps> = ({
 	isError,
 	...props
 }) => {
-	const view = useMemo(
-		() =>
-			!(isLoading || isError) ? (
-				//@ts-ignore
+	const shouldBeRender = useMemo(
+		() => !(isLoading || isError),
+		[isLoading, isError]
+	);
+
+	return (
+		<ST.DatePickerWrapper data-testid="time-date-picker">
+			{shouldBeRender ? (
 				<DatePicker
 					onChange={onChange}
 					{...props}
 				>
 					{children}
 				</DatePicker>
-			) : null,
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-		[isLoading, isError, onChange, children, ...Object.values(props)]
-	);
-	return (
-		<ST.DatePickerWrapper data-testid="time-date-picker">
-			{view}
+			) : null}
 		</ST.DatePickerWrapper>
 	);
 };
