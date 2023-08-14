@@ -25,7 +25,7 @@ function style({
  
   @media  (max-width:${BreakPoints.EXTRA_TABLET + "px"} ) or
     (width > ${BreakPoints.EXTRA_TABLET + "px"} )  {
-    font-size:  ${font_size ? font_size : large_extra_mq};
+    font-size:  ${font_size ? font_size : large_extra_mq };
   }
   @media (max-width: ${BreakPoints.TABLET + "px"}) {
     font-size:  ${font_size ? font_size : large_mq};
