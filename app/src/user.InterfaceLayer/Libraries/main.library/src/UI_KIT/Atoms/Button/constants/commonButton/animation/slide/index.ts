@@ -24,7 +24,8 @@ export const slideBackground = css`
 	&:active {
 		&::before {
 			width: 100%;
-			background: ${Colors.ORANGE_ACTIVE} !important;
+			transition: all 0.2s ease;
+			background: ${Colors.ORANGE_ACTIVE};
 			z-index: -3;
 		}
 	}
