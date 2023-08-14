@@ -1,15 +1,18 @@
-export interface IProps {
-  width?: string;
-  height?: string;
-  defaultImage: string;
-  alt?: string;
-  images: images[];
+import { Format } from "./enum";
+
+type source = {
+  srcset: string,
+  type?: Format | never,
+  media?: string | never,
+  width?: string | never,
+  height?: string | never,
 }
 
-type images = {
-  srcset: string,
-  type?: string,
-  media?: string,
+export interface IProps {
+  source: source[];
+  defaultImage: string;
   width?: string;
   height?: string;
+  alt?: string;
+  isLoading?: boolean;
 }

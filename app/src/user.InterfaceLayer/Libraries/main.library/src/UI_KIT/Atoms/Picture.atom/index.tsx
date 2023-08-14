@@ -3,32 +3,22 @@ import React, { FC } from "react";
 import * as ST from "./styled";
 import { IProps } from "./type";
 
-const Picture: FC<IProps> = ({
-	images,
-	width,
-	height,
-	defaultImage,
-	alt,
-	...other
-}) => (
+const Picture: FC<IProps> = ({ source, defaultImage, ...props }) => (
 	<ST.Picture>
-		{images.map((source) => (
+		{source.map((item) => (
 			<ST.Source
-				key={source.type}
-				srcSet={source.srcset}
-				width={source.width}
-				height={source.height}
-				type={`image/${source.type}`}
-				media={source.media}
+				key={item.srcset}
+				srcSet={item.srcset}
+				width={item?.width}
+				height={item?.height}
+				type={item.type ? `image/${item.type}` : undefined}
+				media={item?.media}
 			/>
 		))}
-
 		<ST.Image
+			loading="lazy"
 			src={defaultImage}
-			width={width}
-			height={height}
-			alt={alt}
-			{...other}
+			{...props}
 		/>
 	</ST.Picture>
 );
