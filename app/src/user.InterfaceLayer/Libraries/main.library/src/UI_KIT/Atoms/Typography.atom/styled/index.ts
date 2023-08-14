@@ -16,12 +16,12 @@ function style({
 	font_style,
 }: TextProps): String {
 	return `
-    font-size:  ${font_size ? font_size : "16px"};
-    font-weight:  ${weight};
-    color: ${color ? color : "#000000"};
-    font-family: ${family};
-    line-height: ${line_height};
-    font-style: ${font_style};
+    font-size:  ${font_size ? font_size : "inherit"};
+    font-weight:  ${weight?weight:"inherit"};
+    color: ${color ? color : "inherit"};
+    font-family: ${family?family:"inherit"};
+    line-height: ${line_height?line_height:"inherit"};
+    font-style: ${font_style?font_style:"inherit"};
  
   @media  (max-width:${BreakPoints.EXTRA_TABLET + "px"} ) or
     (width > ${BreakPoints.EXTRA_TABLET + "px"} )  {
