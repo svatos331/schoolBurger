@@ -20,6 +20,9 @@ export enum CommonComponentsProps {
 	style = "style",
 	required = "required",
 	min = "min",
+	color="color",
+	fontStyle = "fontStyle",
+	fontSize = "fontSize",
 	max = "max",
 	step = "step",
 	options = "options",
@@ -38,13 +41,15 @@ export enum CommonComponentsProps {
 export interface ICommonComponentProps {
 	[CommonComponentsProps.onChange]?: () => void;
 	[CommonComponentsProps.isError]?: boolean;
+	[CommonComponentsProps.fontStyle]?:string;
+	[CommonComponentsProps.fontSize]?:string;
 	[CommonComponentsProps.isLoading]?: boolean;
 	[CommonComponentsProps.isSuccess]?: boolean;
 	[CommonComponentsProps.onError]?: () => void;
 	[CommonComponentsProps.onSubmit]?: () => void;
 	[CommonComponentsProps.onClick]?: () => void;
 	[CommonComponentsProps.onToggle]?: () => void;
-	[CommonComponentsProps.value]?: any;
+	[CommonComponentsProps.value]?: string | number;
 	[CommonComponentsProps.dateFormat]?: string;
 	[CommonComponentsProps.timeFormat]?: string;
 	[CommonComponentsProps.type]?: string;
@@ -60,7 +65,7 @@ export interface ICommonComponentProps {
 	[CommonComponentsProps.min]?: number;
 	[CommonComponentsProps.max]?: number;
 	[CommonComponentsProps.step]?: number;
-	[CommonComponentsProps.options]?: Array<{ label: string; value: any }>; // Используем value для определения значения выбора
+	[CommonComponentsProps.options]?: Array<{[key:string]: string | number}>;//todo-id,value
 	[CommonComponentsProps.multiple]?: boolean;
 	[CommonComponentsProps.rows]?: number;
 	[CommonComponentsProps.cols]?: number;
