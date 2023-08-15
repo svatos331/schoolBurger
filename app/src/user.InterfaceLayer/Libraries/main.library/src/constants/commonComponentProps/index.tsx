@@ -34,6 +34,11 @@ export enum CommonComponentsProps {
 	dateFormat = "dateFormat",
 	timeFormat = "timeFormat",
 }
+const enum Enum {
+	key1 = "value1",
+	key2 = "value2",
+	key3 = "value3",
+}
 
 export interface ICommonComponentProps {
 	[CommonComponentsProps.onChange]?: () => void;
