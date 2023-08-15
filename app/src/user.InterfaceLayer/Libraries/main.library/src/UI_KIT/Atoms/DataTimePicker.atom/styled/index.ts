@@ -1,8 +1,25 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+
 import Colors from "../../../../constants/colors";
+
 import LocaleColors from "../const/colors";
+
 import FontsEnum from "../../../../constants/fonts";
+
 import BreakPoints from "../../../../constants/breakPoints";
+
+import { css } from "styled-components";
+
+const colorChange = keyframes`
+  from {
+	  background-color: ${Colors.ORANGE_HOVER};
+
+  }
+  to {
+	  background-color: ${Colors.ORANGE_ACTIVE};
+	  color: ${Colors.WHITE} !important;
+  }
+`;
 
 export const DatePickerWrapper = styled.div<{$animation?:boolean,$disabled?:boolean}>`
 @charset "UTF-8";
@@ -11,10 +28,36 @@ export const DatePickerWrapper = styled.div<{$animation?:boolean,$disabled?:bool
 		font-weight: 400;
 		& input{
 			padding : 11px 92px;
-
+			background-color: ${Colors.WHITE_DEFAULT};
+			font-style: normal;
+			font-weight: 400;
 			-moz-border-radius: 12px;
 			-webkit-border-radius: 12px;
 			text-align: center;
+			line-height: 100%;
+			${({$disabled}) =>
+				$disabled
+					? css`
+							background-color: ${Colors.BUTTON_DISABLED_BG};
+							color: ${Colors.BUTTON_DISABLED_TEXT};
+					  `
+					: css`
+							background-color: ${Colors.WHITE_DEFAULT};
+							border: 0;
+							color: ${Colors.BLACK};
+
+							&:hover {
+								background-color: ${Colors.ORANGE_HOVER};
+								color: ${Colors.WHITE};
+								transition: background-color 0.1s ease;
+							}
+					  `}
+			${({$animation, $disabled}) =>
+				$animation &&
+				!$disabled &&
+				css`
+					animation: ${colorChange} 0.4s linear forwards;
+				`};
 			@media (max-width: ${BreakPoints.SMALL_MOBILE}px){
 				padding : 11px 48px;
 			}
@@ -24,7 +67,7 @@ export const DatePickerWrapper = styled.div<{$animation?:boolean,$disabled?:bool
 	.react-datepicker__year-read-view--down-arrow,
 	.react-datepicker__month-read-view--down-arrow,
 	.react-datepicker__month-year-read-view--down-arrow, .react-datepicker__navigation-icon::before {
-		border-color: ${Colors.GRAY};
+		border-color: ${Colors.ORANGE_HOVER};
 		border-style: solid;
 		border-width: 3px 3px 0 0;
 		content: "";
@@ -42,16 +85,15 @@ export const DatePickerWrapper = styled.div<{$animation?:boolean,$disabled?:bool
 	.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::after, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
 		box-sizing: content-box;
 		position: absolute;
-		border: 8px solid transparent;
+		border: 8px solid ${Colors.TRANSPARENT};
 		height: 0;
 		width: 1px;
 		content: "";
 		z-index: -1;
-		border-width: 8px;
 		left: -8px;
 	}
 	.react-datepicker-popper[data-placement^=top] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before {
-		border-bottom-color: ${Colors.GRAY};
+		border-bottom-color: ${Colors.ORANGE_ACTIVE};
 	}
 
 	.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle {
@@ -93,7 +135,7 @@ export const DatePickerWrapper = styled.div<{$animation?:boolean,$disabled?:bool
 	}
 
 	.react-datepicker {
-		font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+		font-family: ${FontsEnum.Nunito}, helvetica, arial, sans-serif;
 		font-size: 0.8rem;
 		background-color: ${Colors.WHITE};
 		color: ${Colors.BLACK};
@@ -233,7 +275,7 @@ export const DatePickerWrapper = styled.div<{$animation?:boolean,$disabled?:bool
 		top: -4px;
 	}
 	.react-datepicker__navigation:hover *::before {
-		border-color: ${Colors.GRAY};
+		border-color: ${Colors.ORANGE_ACTIVE};
 	}
 
 	.react-datepicker__navigation-icon {
@@ -335,7 +377,7 @@ export const DatePickerWrapper = styled.div<{$animation?:boolean,$disabled?:bool
 	}
 	.react-datepicker__time-container .react-datepicker__time {
 		position: relative;
-		background: white;
+		background: ${Colors.WHITE};
 		border-bottom-right-radius: 0.3rem;
 	}
 	.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
@@ -366,7 +408,7 @@ export const DatePickerWrapper = styled.div<{$animation?:boolean,$disabled?:bool
 	}
 	.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected {
 		background-color: ${Colors.ORANGE_HOVER};
-		color: white;
+		color: ${Colors.WHITE};
 		font-weight: bold;
 	}
 	.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected:hover {
