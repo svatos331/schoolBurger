@@ -44,8 +44,8 @@ li {
   margin: 0;
 }
 img {
-  width: auto;
-  height: auto;
+  /* width: auto;
+  height: auto; */
 }
 button {
   border: none;
