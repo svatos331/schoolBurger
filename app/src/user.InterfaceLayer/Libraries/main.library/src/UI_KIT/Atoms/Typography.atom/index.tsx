@@ -79,9 +79,9 @@ export const Typography: FC<IText> = ({
 					family={family ? family : FontsEnum.Nunito}
 					line_height={line_height ? line_height : "normal"}
 					small_mq={small_mq}
-					medium_mq={medium_mq}
+					medium_mq={medium_mq?medium_mq:"12px"}
 					large_mq={large_mq}
-					large_extra_mq={large_extra_mq }
+					large_extra_mq={large_extra_mq?large_extra_mq:"16px"}
 					font_style={font_style ? font_style : "normal"}
 				>
 					{children}

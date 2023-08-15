@@ -2,8 +2,6 @@ import React, { FunctionComponent } from "react";
 
 // import {Icons , Icon } from "../../UI_KIT/Atoms/Atom1.atom/icons";
 import Widget1Type from "./type";
-import Typography from "../../UI_KIT/Atoms/Typography.atom";
-import { Tags } from "../../UI_KIT/Atoms/Typography.atom/enum";
 
 const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 	const { data } = useGetTodoQuery({ authToken: "", params: { id: "1" } });
@@ -11,21 +9,6 @@ const Widget1: FunctionComponent<Widget1Type> = ({ useGetTodoQuery }) => {
 	return (
 		<div>
 			data from jsonplaceholder : {JSON.stringify(data)}
-			<Typography as={Tags.h1}>
-				Lorem ipsum dolor sit amet consectetur.
-				<Typography as={Tags.span} color="#FF5CFF" children="sit amet consectetur."/>
-			</Typography>
-			<Typography
-				as={Tags.p}
-				color="#a746a7"
-				children="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non?"
-				// large_mq="40px"
-				// large_extra_mq="60px"
-				// medium_mq="20px"
-				// small_mq="12px"
-				font_size="29px"
-			/>
-			
 		</div>
 	);
 };

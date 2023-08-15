@@ -11,6 +11,7 @@
 UI_KIT/Atoms/Typography.atom/enum/:
 Также там описаны варианты шрифтов используемые в данном проекте
 с указанием где на станице используются стилизованные теги: (h1,h2,h3,p,p1,p2,p4,span)
+При использовании font_size совместно с MediaQuery , font_size имеет приоритет.
 ### Тип тега:
 - тег      - as                  (пример: as={Tags.h1} )    
 ### Свойства текста:
@@ -24,39 +25,7 @@ UI_KIT/Atoms/Typography.atom/enum/:
 По дизайну проекта предусмотрены BreakPoints 
 добавлены свойства уставновки размера(font_size) 
 применияемые при изменения размеров экрана(viewport):
-- при TABLE        (~1440px) - large_mq     (пример: large_mq={"50px"} )
-- при MOBILE       (~740px)  - medium_mq    (пример: medium_mq={"36px"})
-- при SMALL_MOBILE (~359)    - small_mq     (пример: small_mq={"30px"} )
- 
-	SMALL_MOBILE = 359,
-	MOBILE = 768,
-	TABLET = 1024,
-
-Важное примечание: использование "font_size" сов 
- export interface IText extends TextProps {
-	as: Tags;
-	children?: JSX.Element | ReactNode;
-}
-
-export interface TextProps extends ICommonComponentProps,MediaQuerySize {
-	font_size?: string;
-	color?: string| Colors;
-	weight?: number;
-	line_height?: string;
-	family?: string;
-	font_style?: string;
-}
-export interface MediaQuerySize {
-	small_mq?: string;
-	medium_mq?: string;
-	large_mq?: string;
-}
-font_size,
-	family,
-	line_height,
-	color,
-	weight,
-	large_mq,
-	medium_mq,
-	small_mq,
-	font_style,
+- при EXTRA_TABLET (~1440) - large_extra_mq (пример: large_extra_mq={"100px"} )
+- при TABLE        (~1024) - large_mq     	(пример: large_mq={"50px"} )
+- при MOBILE       (~768)  - medium_mq    	(пример: medium_mq={"36px"})
+- при SMALL_MOBILE (~320)  - small_mq     	(пример: small_mq={"30px"} )

@@ -23,29 +23,33 @@ function style({
     line-height: ${line_height ? line_height : "inherit"};
     font-style: ${font_style ? font_style : "inherit"};
  ${
-		large_extra_mq &&
-		` @media  (max-width:${BreakPoints.EXTRA_TABLET + "px"} ) or
+		large_extra_mq&&!font_size
+			? ` @media  (max-width:${BreakPoints.EXTRA_TABLET + "px"} ) or
     (width > ${BreakPoints.EXTRA_TABLET + "px"} )  {
     font-size:  ${large_extra_mq};
-  }`
+  };`
+			: ""
  }
  ${
-		large_mq &&
-		`@media (max-width: ${BreakPoints.TABLET + "px"}) {
+		large_mq&&!font_size
+			? `@media (max-width: ${BreakPoints.TABLET + "px"}) {
     font-size:  ${large_mq};
-  }`
+  };`
+			: ""
  }
  ${
-		medium_mq &&
-		` @media (max-width: ${BreakPoints.MOBILE + "px"}) {
+		medium_mq&&!font_size
+			? ` @media (max-width: ${BreakPoints.MOBILE + "px"}) {
     font-size:  ${medium_mq};
-  }`
+  };`
+			: ""
  }
 ${
-	small_mq &&
-	` @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
+	small_mq&&!font_size
+		? ` @media (max-width: ${BreakPoints.SMALL_MOBILE + "px"}) {
     font-size:   ${small_mq};
-  }`
+  };`
+		: ""
 }
   `;
 }
