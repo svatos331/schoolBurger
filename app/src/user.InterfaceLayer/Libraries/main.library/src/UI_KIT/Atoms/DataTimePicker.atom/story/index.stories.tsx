@@ -39,19 +39,7 @@ export const Inline: Story = {
 };
 export const Default: Story = {
 	args: {
+		className: "s1",
 		onChange: () => {},
-	},
-};
-export const Disabled: Story = {
-	args: {
-		onChange: () => {},
-		disabledInput: true,
-		inline: true,
-	},
-};
-export const NonClosable: Story = {
-	args: {
-		onChange: () => {},
-		shouldCloseOnSelect: false,
 	},
 };

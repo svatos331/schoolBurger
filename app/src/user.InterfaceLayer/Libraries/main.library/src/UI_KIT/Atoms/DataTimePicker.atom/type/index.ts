@@ -18,7 +18,6 @@ interface IDatePickerPropsLocal
 		ICommonComponentProps {
 	[CommonComponentsProps.onChange]: onChangeDateEvent | onChangeIntervalEvent;
 	selectsRange?: boolean;
-	disabledInput?: boolean;
 }
 export type IDatePickerProps = Omit<
 	IDatePickerPropsLocal,
@@ -31,5 +30,4 @@ export type IDatePickerProps = Omit<
 	| "monthClassName"
 	| "weekDayClassName"
 	| "wrapperClassName"
-	| "disabled"
 >;
