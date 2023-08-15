@@ -15,8 +15,7 @@ type onChangeIntervalEvent = (date: [Date, Date]) => void;
 // @ts-ignore
 interface IDatePickerPropsLocal
 	extends ReactDatePickerProps,
-		//@ts-ignore//todo--ругается на "isLoading" -фикситься если убрать енамы из интерфейсы ICommonProps
-		Pick<ICommonComponentProps, "isLoading" | "isSuccess" | "isError"> {
+		ICommonComponentProps {
 	[CommonComponentsProps.onChange]: onChangeDateEvent | onChangeIntervalEvent;
 	selectsRange?: boolean;
 	disabledInput?: boolean;

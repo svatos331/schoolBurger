@@ -18,7 +18,7 @@ export const DatePickerWrapper = styled.div<{
 	$animation?: boolean;
 }>`
 	color: ${Colors.BLACK};
-	font-family: ${FontsEnum.Nunito} Arial sans-serif;
+	font-family: ${FontsEnum.Nunito}, serif;
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
@@ -770,7 +770,7 @@ export const DatePickerWrapper = styled.div<{
 	.react-datepicker__quarter-text--disabled,
 	.react-datepicker__year-text--disabled {
 		cursor: default;
-		color: ${Colors.GRAY};
+		color: ${Colors.WHITE};
 	}
 
 	.react-datepicker__day--disabled:hover,
