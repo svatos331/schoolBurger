@@ -9,7 +9,6 @@ export const Picture = styled.picture<{radius?: string}>`
 export const Source = styled.source``;
 
 export const Image = styled.img`
-  // max-width: 100%;
   display: flex;
   object-fit: cover;
 `;

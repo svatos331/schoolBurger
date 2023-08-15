@@ -3,16 +3,14 @@ import React, { FC } from "react";
 import * as ST from "./styled";
 import { IProps } from "./type";
 
-const Picture: FC<IProps> = ({ source, defaultImage, ...props }) => (
-	<ST.Picture>
-		{source.map((item) => (
+const Picture: FC<IProps> = ({ sources, defaultImage, radius, ...props }) => (
+	<ST.Picture radius={radius}>
+		{sources.map(({ srcset, type, ...item }) => (
 			<ST.Source
-				key={item.srcset}
-				srcSet={item.srcset}
-				width={item?.width}
-				height={item?.height}
-				type={item.type ? `image/${item.type}` : undefined}
-				media={item?.media}
+				srcSet={srcset}
+				type={type && `image/${type}`}
+				{ ...item }
+				key={srcset}
 			/>
 		))}
 		<ST.Image

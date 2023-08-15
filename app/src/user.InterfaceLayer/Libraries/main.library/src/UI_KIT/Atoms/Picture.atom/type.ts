@@ -1,18 +1,18 @@
-import { Format } from "./enum";
+import { FormatImages } from "./enum";
 
-type source = {
+type sources = {
   srcset: string,
-  type?: Format | never,
-  media?: string | never,
-  width?: string | never,
-  height?: string | never,
+  type?: FormatImages | undefined,
+  media?: string | undefined,
+  width?: string,
+  height?: string,
 }
 
 export interface IProps {
-  source: source[];
+  sources: sources[];
   defaultImage: string;
   width?: string;
   height?: string;
   alt?: string;
-  isLoading?: boolean;
+  radius: string
 }

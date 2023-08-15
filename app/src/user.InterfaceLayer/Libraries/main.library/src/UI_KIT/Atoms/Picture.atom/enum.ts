@@ -1,4 +1,4 @@
-export enum Format {
+export enum FormatImages {
   WEBP = "webp",
   JPG = "jpg",
   JPEG = "jpeg",
