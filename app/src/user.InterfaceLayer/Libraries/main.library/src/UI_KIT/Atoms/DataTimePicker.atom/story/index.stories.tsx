@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj, Story as StoryType } from "@storybook/react";
 import DataTimePicker from "../index";
 import { IDatePickerProps } from "../type";
-
+import addDays from "date-fns/addDays";
 export const TestDatePicker: FC<IDatePickerProps> = ({
 	children,
 	...props
@@ -31,6 +31,31 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
+const DataPickerWithRangeTemplate : StoryType<IDatePickerProps>= (args) => {
+	const {children} = args;
+	const [startDate, setStartDate] = useState<Date>(new Date());
+	const [endDate, setEndDate] = useState<Date | null>(null);
+	const onChange = (dates : [Date, Date]) => {
+		const [start, end] = dates;
+		setStartDate(start);
+		setEndDate(end);
+	};
+	return <DataTimePicker
+		{...args}
+		selected={startDate}
+		onChange={onChange}
+		startDate={startDate}
+		endDate={endDate}
+		selectsRange
+		inline
+	>
+		{children}
+	</DataTimePicker>
+}
+export const DatePickerWithRangeView = DataPickerWithRangeTemplate.bind({});
+DatePickerWithRangeView.args = {
+	excludeDates:[addDays(new Date(), 1), addDays(new Date(), 5)]
+}
 export const Inline: Story = {
 	args: {
 		onChange: () => {},
@@ -49,9 +74,4 @@ export const Disabled: Story = {
 		inline: true,
 	},
 };
-export const NonClosable: Story = {
-	args: {
-		onChange: () => {},
-		shouldCloseOnSelect: false,
-	},
-};
+
