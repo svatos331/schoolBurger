@@ -31,6 +31,13 @@ export const CartButton: Story = {
 export const CategoryButton: Story = {
 	args: {
 		type: ButtonEnum.enum_categoryButton,
-		children: "Закуски",
+		children: "",
+	},
+};
+
+export const SocialButton: Story = {
+	args: {
+		type: ButtonEnum.enum_socialBtn,
+		children: "",
 	},
 };
