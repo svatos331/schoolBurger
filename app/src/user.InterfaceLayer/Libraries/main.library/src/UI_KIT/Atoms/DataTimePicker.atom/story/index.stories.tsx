@@ -7,6 +7,7 @@ import DataTimePicker from "../index";
 import { IDatePickerProps } from "../type";
 
 import addDays from "date-fns/addDays";
+import addMonths from "date-fns/addMonths";
 
 export const TestDatePicker: FC<IDatePickerProps> = ({
 	children,
@@ -20,12 +21,36 @@ export const TestDatePicker: FC<IDatePickerProps> = ({
 			{...props}
 			selected={date}
 			onChange={setDate}
+			minDate={new Date()}
+			maxDate={addMonths(new Date(), 5)}
 		>
 			{children}
 		</DataTimePicker>
 	);
 };
+const DataPickerWithRangeTemplate:  StoryType<IDatePickerProps> = ({
+														 children,
+														 ...props
+													 }) => {
 
+	const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([null, null]);
+	const [startDate, endDate] = dateRange;
+
+	return (
+		<DataTimePicker
+			{...props}
+			selectsRange={true}
+			startDate={startDate}
+			endDate={endDate}
+			onChange={(update : [Date, Date]) => {
+				setDateRange(update);
+			}}
+			isClearable={true}
+		>
+			{children}
+		</DataTimePicker>
+	);
+};
 const meta = {
 	title: "DataPickers/DataTimePicker",
 	component: TestDatePicker,
@@ -39,7 +64,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const DataPickerWithRangeTemplate : StoryType<IDatePickerProps>= (args) => {
+const DataPickerWithSelectRangeTemplate : StoryType<IDatePickerProps>= (args) => {
 	const {children} = args;
 
 	const [startDate, setStartDate] = useState<Date>(new Date());
@@ -64,11 +89,7 @@ const DataPickerWithRangeTemplate : StoryType<IDatePickerProps>= (args) => {
 		{children}
 	</DataTimePicker>
 }
-export const DatePickerWithRangeView = DataPickerWithRangeTemplate.bind({});
 
-DatePickerWithRangeView.args = {
-	excludeDates:[addDays(new Date(), 1), addDays(new Date(), 5)]
-}
 export const Inline: Story = {
 	args: {
 		onChange: () => {},
@@ -87,4 +108,13 @@ export const Disabled: Story = {
 		inline: true,
 	},
 };
+export const DatePickerWithSelectRangeView = DataPickerWithSelectRangeTemplate.bind({});
+DatePickerWithSelectRangeView.args = {
+	excludeDates:[addDays(new Date(), 1), addDays(new Date(), 5)],
+	minDate:new Date(),
+	maxDate:addMonths(new Date(), 5),
+}
+export const DatePickerWithRangeView = DataPickerWithRangeTemplate.bind({});
+DatePickerWithRangeView.args = {
 
+}

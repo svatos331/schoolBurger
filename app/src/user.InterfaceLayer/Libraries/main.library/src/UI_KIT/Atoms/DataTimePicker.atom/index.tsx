@@ -1,6 +1,7 @@
 import React, { FC, memo, useCallback, useMemo, useState } from "react";
 
 import DatePicker from "react-datepicker";
+import  "react-datepicker/dist/react-datepicker.css";
 
 import { IDatePickerProps } from "./type";
 

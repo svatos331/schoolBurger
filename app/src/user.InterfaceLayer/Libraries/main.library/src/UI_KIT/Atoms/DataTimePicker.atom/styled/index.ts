@@ -105,10 +105,7 @@ export const DatePickerWrapper = styled.div<{
 		width: 0;
 	}
 
-	.react-datepicker-popper[data-placement^="top"]
-		.react-datepicker__triangle::before
-	.react-datepicker-popper[data-placement^="bottom"]
-		.react-datepicker__triangle::before
+	.react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before
 	.react-datepicker-popper[data-placement^="top"]
 		.react-datepicker__triangle::after
 	.react-datepicker-popper[data-placement^="bottom"]
