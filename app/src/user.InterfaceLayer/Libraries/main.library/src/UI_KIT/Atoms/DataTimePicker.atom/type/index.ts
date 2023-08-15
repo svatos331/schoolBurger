@@ -13,21 +13,9 @@ type onChangeDateEvent = (
 type onChangeIntervalEvent = (date: [Date, Date]) => void;
 
 // @ts-ignore
-interface IDatePickerPropsLocal
+export interface IDatePickerProps
 	extends ReactDatePickerProps,
 		ICommonComponentProps {
 	[CommonComponentsProps.onChange]: onChangeDateEvent | onChangeIntervalEvent;
 	selectsRange?: boolean;
 }
-export type IDatePickerProps = Omit<
-	IDatePickerPropsLocal,
-	| "calendarClassName"
-	| "timeClassName"
-	| "dayClassName"
-	| "className"
-	| "clearButtonClassName"
-	| "popperClassName"
-	| "monthClassName"
-	| "weekDayClassName"
-	| "wrapperClassName"
->;

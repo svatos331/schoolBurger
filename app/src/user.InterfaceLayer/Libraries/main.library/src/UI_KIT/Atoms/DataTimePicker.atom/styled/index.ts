@@ -4,16 +4,14 @@ import BreakPoints from "../../../../constants/breakPoints";
 import FontsEnum from "../../../../constants/fonts";
 
 export const DatePickerWrapper = styled.div`
-	.dayDatePicker,
-	.timeDatePicker,
-	.datePickerClazz,
-	.calendarDatePicker {
+	.dayClassName,
+	.timeClassName,
+	.className,
+	.calendarClassName {
 		font-family: ${FontsEnum.Nunito} sans-serif !important;
 		font-size: 16px;
 		& div {
 			font-family: ${FontsEnum.Nunito} sans-serif !important;
 		}
-	}
-	& > div {
 	}
 `;

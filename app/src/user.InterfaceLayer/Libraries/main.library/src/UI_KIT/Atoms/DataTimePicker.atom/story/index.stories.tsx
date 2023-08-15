@@ -39,7 +39,6 @@ export const Inline: Story = {
 };
 export const Default: Story = {
 	args: {
-		className: "s1",
 		onChange: () => {},
 	},
 };
