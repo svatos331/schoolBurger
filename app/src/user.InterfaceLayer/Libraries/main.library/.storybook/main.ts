@@ -15,5 +15,13 @@ const config: StorybookConfig = {
 	docs: {
 		autodocs: "tag",
 	},
+	babel: async (options) => ({
+		...options,
+		plugins: [],
+		presets: [
+			["@babel/preset-typescript", { allowDeclareFields: true }],
+			["@babel/preset-react", { runtime: "automatic" }],
+		],
+	}),
 };
 export default config;
