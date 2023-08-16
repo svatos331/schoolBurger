@@ -1,21 +1,43 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from "react";
 import { FC, useMemo } from "react";
 import * as ST from "./styled";
 import { ISelectObjectProps } from "./type";
 
-const Select: FC<ISelectObjectProps> = ({ name, valueArray, setValue }) => {
+const Select: FC<ISelectObjectProps> = ({ valueArray, setValue }) => {
+	const [currentValue, setCurrentValue] = useState(valueArray[0].name);
+	const [activeBoolean, setActiveBoolean] = useState(false);
+	const [activeCurrentValue, setActiveCurrentValue] = useState(false);
+	const [firstUpdate, setFirstUpdate] = useState(false)
+	const animationTimer = 1000;
+
+	useEffect(() => {
+		if (firstUpdate) {
+			if (!activeCurrentValue) {
+				setActiveCurrentValue(true);
+				setTimeout(() => {
+					setActiveCurrentValue(false);
+				}, animationTimer);
+			}
+		}
+		setFirstUpdate(true);
+	}, [currentValue]);
+
 	const ErrorTest = useMemo(
 		() => valueArray.length !== 0 && process.env.NODE_ENV === "development",
 		[]
 	);
+
 	const options = useMemo(() => {
 		return valueArray?.map((e, index) => {
 			return (
 				<ST.OptionStyled
 					key={index}
-					value={e}
+					onClick={() => {
+						setValue({id: e.id, name: e.name})
+						setCurrentValue(e.name);
+					}}
 				>
-					{e}
+					{e.name}
 				</ST.OptionStyled>
 			);
 		});
@@ -31,15 +53,24 @@ const Select: FC<ISelectObjectProps> = ({ name, valueArray, setValue }) => {
 					{console.error("Error: no value in Select props S")}
 				</>
 			) : (
-				<ST.SelectStyled
-					onChange={(e) => {
-						setValue(e.target.value);
-						e.target.blur();
-					}}
-					name={name}
-				>
-					{options}
-				</ST.SelectStyled>
+				<ST.SelectWrap>
+					<ST.SelectStyled
+						$animation={activeCurrentValue}
+						$timer={animationTimer}
+						onClick={() => {
+							setActiveBoolean(activeBoolean === true ? false : true);
+						}}
+					>
+						{currentValue}
+					</ST.SelectStyled>
+					<ST.OptionsWrap
+						onMouseLeave={() => setActiveBoolean(false)}
+						$active={activeBoolean}
+						$optionsCount={valueArray.length}
+					>
+						{options}
+					</ST.OptionsWrap>
+				</ST.SelectWrap>
 			)}
 		</>
 	);

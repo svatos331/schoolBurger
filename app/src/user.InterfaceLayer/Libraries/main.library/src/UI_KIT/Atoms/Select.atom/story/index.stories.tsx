@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import Select from "../index";
 
 const meta = {
-  title: 'Example/MyWidget',
+  title: 'Example/Select',
   component: Select,
   tags: ['Atoms'],
   parameters: {
@@ -17,23 +17,12 @@ type Story = StoryObj<typeof meta>;
 export const First: Story = {
   args: {
     name: 'string',
-    valueArray: ['1','2'],
+    valueArray: [
+      { id: 1, name: "Красивенько" },
+      { id: 2, name: "Очень Красивенько" },
+      { id: 3, name: "КРАСИВО" },
+      { id: 4, name: "ОЧЕНЬ" },
+    ],
     setValue: () => {}
   },
 };
-
-export const Second: Story = {
-  args: {
-    name: 'string2',
-    valueArray: ['1','2'],
-    setValue: () => {}
-  },
-  };
-
-  export const Third: Story = {
-    args: {
-      name: 'string3',
-      valueArray: ['1','2'],
-      setValue: () => {}
-    },
-  };
