@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 import Colors from "../../../../constants/colors";
-import { fonts } from "../../../../constants/fonts";
+import  FontsEnum  from "../../../../constants/fonts";
 import { IOptionsWrap, ISelectStyled } from "../type";
 
 const font = `
-	font-family: ${fonts.Nunito};
+	font-family: ${FontsEnum.Nunito};
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
