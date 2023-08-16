@@ -24,8 +24,20 @@ node_modules
 /app/yarn-debug.log*
 /app/yarn-error.log*
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> main
 #locks
 
+<<<<<<< HEAD
+*/.idea
+=======
+#locks
+
+=======
+>>>>>>> main
 yarn.lock
 package-lock.json
 */yarn.lock
@@ -45,3 +57,7 @@ app/src/user.InterfaceLayer/Libraries/main.library/yarn.lock
 .idea/workspace.xml
 .idea/shelf/Uncommitted_changes_before_Update_at_12_08_2023_0_00__Changes_.xml
 .idea/shelf/Uncommitted_changes_before_Update_at_12_08_2023_0_00_\[Changes\]/shelved.patch
+<<<<<<< HEAD
+>>>>>>> StanislavAristov/fix#main
+=======
+>>>>>>> main
