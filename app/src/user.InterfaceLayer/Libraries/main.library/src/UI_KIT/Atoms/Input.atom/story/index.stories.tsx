@@ -22,6 +22,12 @@ const meta = {
 	title: "Atoms/Input",
 	component: TestInput,
 	tags: ["atom"],
+	argTypes: {
+		type: {
+			options: InputTypeEnum,
+			control: {type: 'select'}
+		},
+	},
 	parameters: {
 		layout: "centered",
 	},
@@ -30,69 +36,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const TextOnly: Story = {
+export const InputVariant: Story = {
 	args: {
 		type: InputTypeEnum.TEXT_ONLY,
-	},
-};
-
-export const Number: Story = {
-	args: {
-		type: InputTypeEnum.NUMBER,
-	},
-};
-
-export const Tel: Story = {
-	args: {
-		type: InputTypeEnum.TEL,
-	},
-};
-
-export const Time: Story = {
-	args: {
-		type: InputTypeEnum.TIME,
-	},
-};
-
-export const Text: Story = {
-	args: {
-		type: InputTypeEnum.TEXT,
-	},
-};
-
-export const Card: Story = {
-	args: {
-		type: InputTypeEnum.CARD,
-	},
-};
-
-export const Email: Story = {
-	args: {
-		type: InputTypeEnum.EMAIL,
-	},
-};
-
-export const CardDate: Story = {
-	args: {
-		type: InputTypeEnum.CARD_DATE,
-	},
-};
-
-export const CVV: Story = {
-	args: {
-		type: InputTypeEnum.CVV,
-	},
-};
-
-export const Password: Story = {
-	args: {
-		type: InputTypeEnum.PASSWORD,
-	},
-};
-
-export const Date: Story = {
-	args: {
-		type: InputTypeEnum.DATE,
 	},
 };
 
